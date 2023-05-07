@@ -33,7 +33,7 @@ class CustomFileSystemStorage(FileSystemStorage):
 3. The model returns the prediction.
 4. The prediction is then passed to the template as a context variable.
 5. The template then displays the result. """
-#@login_required(login_url='/accounts/login/')
+@login_required(login_url='signin')
 def scan(request):
     message = ""
     prediction = ""
@@ -108,7 +108,7 @@ def scan(request):
 def home(request):
     return render(request,'index.html')
 
-#@login_required(login_url='/accounts/login/')
+@login_required(login_url='signin')
 def earlydiagnosis(request):
     return render(request,'early-diagnosis.html')
     

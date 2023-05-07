@@ -151,3 +151,5 @@ MEDIA_URL = "/media/"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 GOOGLE_RECAPTCHA_SECRET_KEY= '6LcaEBwlAAAAACIHbAU_h02IunuNS14f65wCojaw'
+
+LOGIN_REDIRECT_URL = "{% url 'signin' %}"

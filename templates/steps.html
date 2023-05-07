@@ -17,41 +17,43 @@
 </head>
 
 <body>
-    <section class="sec1" id="11">
-        <nav id="myHeader" class="navbar navbar-expand-lg  header p-0 fadeIn " data-wow-delay="0.1s">
-            <div class="container-fluid">
-                <div class="logo-div ">
-                    <a href="{% url 'index' %}">
-                        <img class="navbar-brand logo " src="{% static 'img/colorful logo.png' %}" href="#"></img>
-                    </a>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto nav-ul  ">
-                        <li class="nav-item home-word ">
-                            <a class="nav-link active " aria-current="page" href="#11">HOME </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#22">SERVICES</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#33">ABOUT</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="#44">BLOG</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="#55">CONTACT US</a>
-                        </li>
-                    </ul>
-                    <a href="../Arabic/index.html" class="arabic-btn">العربية</a>
+    <!-- sec-nav -->
+    <nav class="navbar navbar-expand-lg  fadeIn nav-sec " data-wow-delay="0.1s">
+        <div class="container-fluid">
+            <div class="logo-div ">
+                <a href="{% url 'index' %}">
+                    <img class="navbar-brand logo " src="{% static 'img/colorful logo.png' %}" href="#"></img>
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto nav-ul  ">
+                    <li class="nav-item home-word ">
+                        <a class="nav-link active " aria-current="page" href="{% url 'index' %}">HOME </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}#22">SERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}#33">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="{% url 'index' %}#44">BLOG</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="{% url 'index' %}#55">CONTACT US</a>
+                    </li>
+                </ul>
+                <a href="../Arabic/index.html" class="arabic-btn">العربية</a>
+                <div class="sign-btn-div">
                     <a class="sign-btn  btn-sm rounded-pill " href="{% url 'signin' %}">Sign In</a>
                 </div>
             </div>
-        </nav>
+        </div>
+    </nav>
 
 
     <!-- sec fe steps  -->
@@ -190,19 +192,19 @@
                                 Links
                             </h4>
                             <div class="footer_links">
-                                <a class="active" href="index.html#11">
+                                <a class="active" href="{% url 'index' %}#11">
                                     Home
                                 </a>
-                                <a class="" href="index.html#22">
+                                <a class="" href="{% url 'index' %}#22">
                                     Services
                                 </a>
-                                <a class="" href="index.html#33">
+                                <a class="" href="{% url 'index' %}#33">
                                     About
                                 </a>
-                                <a class="" href="index.html#44">
+                                <a class="" href="{% url 'index' %}#44">
                                     Blog
                                 </a>
-                                <a class="" href="index.html#55">
+                                <a class="" href="{% url 'index' %}#55">
                                     Contact Us
                                 </a>
                             </div>
