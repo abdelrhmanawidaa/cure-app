@@ -1,0 +1,82 @@
+.signup-sec ,.signin-sec2{
+    background: url(../img/art_deco_blue_background.jpg);
+    background-position: center center;
+    height: 100vh;
+    background-size: cover;
+    background-color:rgb(29 114 17 / 35%);
+    background-blend-mode: overlay;
+    padding-top: 260px;
+}
+.p1-1 {
+    font-size: 70px;
+    font-weight: 500;
+}
+.in1{
+    margin: 10;
+    width: 500;
+    height: 50px;
+    background-color:rgb(240 240 240);
+    border: none;
+    font-size: 15px;
+    border-radius:20px ;
+    color: gray;
+}
+.left-side {
+    padding-top: 180px;
+}
+.titles-right h1 , .f-part h1{
+    font-size: 50px;
+    font-weight:700 !important;
+    color: white;
+
+}
+.titles-right p{
+    color: white;
+    font-size: 23;
+
+}
+.sub2-button{
+    background: white;
+    color: black;
+    font-weight: 500;
+    border: none;
+    height: 47;
+    width: 200;
+    border-radius: 25px;
+    font-size: 15;
+    padding-top: 12;
+    text-align: center;
+}
+.sub-button{
+    margin: 20;
+    height: 47;
+    width: 200;
+    background: #27c49e;
+    border: none;
+    border-radius: 25px;
+    font-size: 15;
+    font-weight: 500;
+}
+
+
+/* partttt two sign up page */
+
+.f-part p{
+    color: white;
+    font-size: 20;
+    padding-top: 15;
+    padding-bottom: 15;
+}
+.p1-2{
+    font-size:60 ;
+    font-weight:500 ;
+}
+.s-part{
+    padding-top: 150;
+
+}
+.g-recaptcha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

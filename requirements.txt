@@ -1,0 +1,14 @@
+Django==4.1.7
+numpy==1.24.2
+Pillow==9.4.0
+keras==2.11.0
+libclang==15.0.6.1
+opencv_python==4.7.0.68
+tensorboard==2.11.2
+tensorboard-data-server==0.6.1
+tensorboard-plugin-wit==1.8.1
+tensorflow==2.11.0
+tensorflow-estimator==2.11.0
+tensorflow-io-gcs-filesystem==0.31.0
+scikit-learn==1.2.1
+scipy==1.10.0

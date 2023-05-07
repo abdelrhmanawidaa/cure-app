@@ -1,0 +1,617 @@
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cure</title>
+    <link rel="icon" type="image/x-icon" href="img/for v.png">
+    <link href="{% static 'css/all.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,500;1,400&family=Poppins:wght@200;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@600&family=Nunito:ital,wght@0,500;1,400&family=Poppins:wght@200;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <section class="sec1" id="11">
+        <nav id="myHeader" class="navbar navbar-expand-lg  header p-0 fadeIn " data-wow-delay="0.1s">
+            <div class="container-fluid">
+                <div class="logo-div ">
+                    <a href="{% url 'index' %}">
+                        <img class="navbar-brand logo " src="{% static 'img/colorful logo.png' %}" href="#"></img>
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto nav-ul  ">
+                        <li class="nav-item home-word ">
+                            <a class="nav-link active " aria-current="page" href="#11">HOME </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#22">SERVICES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#33">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#44">BLOG</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#55">CONTACT US</a>
+                        </li>
+                    </ul>
+                    <a href="../Arabic/index.html" class="arabic-btn">العربية</a>
+                    <a class="sign-btn  btn-sm rounded-pill " href="{% url 'signin' %}">Sign In</a>
+                </div>
+            </div>
+        </nav>
+
+
+
+
+
+
+
+        <div class="content ">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="detail-box">
+                            <h1>
+                                Making Health Care Better Together
+                            </h1>
+                            <p>
+                                Welcome to Cure, dedicated to providing information on diabetes and the latest
+                                technology for early diagnosis through retina scans. Our mission is to help individuals
+                                understand the importance of early detection and provide them with the tools and
+                                resources they need to take control of their health. In addition to our expertise in
+                                retina scans,<span id="dots">...</span> <span id="more">we offer a range of features to
+                                    support individuals with diabetes, including educational resources, personalized
+                                    health tracking tools, and access to a community of experts. Whether you are looking
+                                    to learn more about the disease, or manage your health, we are here to help. Thank
+                                    you for visiting Cure, and we hope you find the information and features here
+                                    useful.</span>
+                            </p>
+                            <div class="btn-box">
+                                <button class="btn1" onclick="myFunction()" id="myBtn">Read more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <section class="sec3 " id="22">
+        <div class="container">
+            <div class="word-services">
+                <h2 class="text-center ">Services</h2>
+            </div>
+            <div class="row ">
+                <div class="col-md-4 text-center prt-sec3 ">
+                    <a href="{% url 'scan' %}">
+                        <div class="sec3-part service-box">
+                            <div class="icon-main  ">
+                                <span class="icon1">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <h2 class="web-word">Retina Scan</h2>
+                            <p class="p-sec3">It helps you to determine whether you have Retinopathy or don’t by using
+                                your eye scan and giving you the stage of illness.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 text-center prt-sec3 ">
+                    <a href="{% url 'earlydiagnosis' %}">
+                        <div class="sec3-part service-box">
+                            <div class="icon-main "> <span class="icon1"><i class="fa fa-umbrella iconself"
+                                        aria-hidden="true"></i></span></div>
+                            <h2 class="web-word">Early Diagnosis</h2>
+                            <p class="p-sec3">Facilitates the early detection of diabetes through the use of targeted
+                                questions. We aim to identify the condition in its early stages</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 text-center prt-sec3 ">
+                    <a href="{% url 'steps' %}">
+                        <div class="sec3-part service-box">
+                            <div class="icon-main "> <span class="icon1"><i class="fa fa-bullhorn iconself"
+                                        aria-hidden="true"></i></span></div>
+                            <h2 class="web-word">Your Steps</h2>
+                            <p class="p-sec3">It helps you to know the correct steps that you must take, whether for
+                                yourself or others or on the website.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 text-center prt-sec3 ">
+                    <a href="{% url 'foodpoints' %}">
+                        <div class="sec3-part service-box">
+                            <div class="icon-main "> <span class="icon1"><i class="fa fa-cutlery"
+                                        aria-hidden="true"></i></span></div>
+                            <h2 class="web-word">Food Points</h2>
+                            <p class="p-sec3">To track your daily food points. By calculating the points associated with
+                                the foods you consume throughout the day</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 text-center prt-sec3 ">
+                    <a href="{% url 'chatbot' %}">
+                        <div class="sec3-part service-box">
+                            <div class="icon-main "> <span class="icon1"><i class="fa fa-comments"
+                                        aria-hidden="true"></i></span></div>
+                            <h2 class="web-word">Chat Bots</h2>
+                            <p class="p-sec3"> our chatbot can provide assistance and support. Our chatbot is available
+                                to
+                                provide helpful answers and guidance.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 text-center prt-sec3 ">
+                    <a href="{% url 'faqs' %}">
+                        <div class="sec3-part service-box">
+                            <div class="icon-main "> <span class="icon1"><i class="fa fa-question"
+                                        aria-hidden="true"></i></span></div>
+                            <h2 class="web-word">FAQ</h2>
+                            <p class="p-sec3">Offers responses to frequently asked questions to provide you with helpful
+                                information. We aim to provide individuals with the knowledge they need.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- About Start -->
+    <section id="33" class="container-xxl py-5">
+        <div class="container">
+            <div class="word-about">
+                <h2 class="text-center ">About Us</h2>
+            </div>
+            <div class="row sec-about g-5">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="d-flex flex-column">
+                        <img class="img-fluid rounded w-75 align-self-end" src="{% static 'img/about-1.jpg' %}" alt="">
+                        <img class="img-fluid rounded w-50 bg-white pt-3 pe-3" src="{% static 'img/about-2.jpg' %}" alt=""
+                            style="margin-top: -25%;">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <h1 class="mb-4">Why You Should Trust Us? Get Know About Us!</h1>
+                    <p>At Cure, we are dedicated to providing individuals with accurate and reliable information on
+                        diabetes, with a focus on retina scan and early diagnosis. We believe that early detection of
+                        diabetes is essential in preventing or delaying the onset of complications and improving overall
+                        health outcomes.</p>
+                    <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum
+                        amet diam ipsum. Clita clita labore, dolor duo nonumy clita sit at, sed sit sanctus dolor eos.
+                    </p>
+                    <p><i class="icon-1 far fa-check-circle  me-3"></i>Quality health care</p>
+                    <p><i class=" icon-1 far fa-check-circle  me-3"></i>Trustworthy information</p>
+                    <p><i class=" icon-1 far fa-check-circle  me-3"></i>Medical Research Professionals </p>
+                    <p><i class=" icon-1 far fa-check-circle  me-3"></i>Patient-centered approach</p>
+                    <p><i class=" icon-1 far fa-check-circle  me-3"></i>With you in every Step</p>
+                    <!-- <button class=" read-btn btn btn-dark rounded-pill py-3 px-5 mt-3"  onclick="myFunction()" id="myBtn">Read more</button> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About End -->
+
+
+    <section class="sec5">
+        <div class="container">
+            <div class="word-services ">
+                <h2 class="text-center ">Testimonials.</h2>
+                <p class="text-center">What Say Our Patients!</p>
+            </div>
+
+
+            <!-- sec5 sliderrr -->
+            <div class="slider-sec5 row ">
+                <div class="col-md-10 ">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active main-div6 " style="width: 945px;">
+                                <div class="row cust-rev h-100">
+                                    <div class="col-sm-3 text-center"><img src="{% static 'img/testimonial-1.jpg' %}" width="100"
+                                            alt="" />
+                                        <h5 class="mt-3 fw-medium text-dark">Jeny Doe</h5>
+                                        <p class="fw-normal mb-0">Web Designer</p>
+                                    </div>
+                                    <div class="col-sm-9 text-center text-sm-start pt-3 pt-sm-0">
+                                        <h2>Fantastic Response!</h2>
+                                        <div class="my-2"><i class="fas fa-star me-2"></i><i
+                                                class="fas fa-star me-2"></i><i class="fas fa-star me-2"></i><i
+                                                class="fas fa-star-half-alt me-2"></i><i class="far fa-star"></i></div>
+                                        <p>I can't recommend Cure enough! The focus on early detection through is so
+                                            important and the resources and support provided by the website have been
+                                            incredibly helpful in managing my diabetes., get online consultations, and
+                                            see physicians, who will assist you through the whole procedure. And all of
+                                            the prescriptions, medications, and other services they offer are 100%
+                                            genuine, medically verified, and proved. I believe that the cure staff is
+                                            doing an outstanding job. Highly recommended their health care services.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row cust-rev h-100">
+                                    <div class="col-sm-3 text-center"><img src="{% static 'img/testimonial-2.jpg' %}" width="100"
+                                            alt="" />
+                                        <h5 class="mt-3 fw-medium text-dark">Jeny Doe</h5>
+                                        <p class="fw-normal mb-0">Web Designer</p>
+                                    </div>
+                                    <div class="col-sm-9 text-center text-sm-start pt-3 pt-sm-0">
+                                        <h2>Fantastic Response!</h2>
+                                        <div class="my-2"><i class="fas fa-star me-2"></i><i
+                                                class="fas fa-star me-2"></i><i class="fas fa-star me-2"></i><i
+                                                class="fas fa-star-half-alt me-2"></i><i class="far fa-star"></i></div>
+                                        <p>This medical and health care facility distinguishes itself from the
+                                            competition by providing technologically advanced medical and health care. A
+                                            mobile app and a website are available via which you can easily schedule
+                                            appointments, get online consultations, and see physicians, who will assist
+                                            you through the whole procedure. And all of the prescriptions, medications,
+                                            and other services they offer are 100% genuine, medically verified, and
+                                            proved. I believe that the cure staff is doing an outstanding job. Highly
+                                            recommended their health care services.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row cust-rev h-100">
+                                    <div class="col-sm-3 text-center"><img src="{% static 'img/testimonial-3.jpg' %}" width="100"
+                                            alt="" />
+                                        <h5 class="mt-3 fw-medium text-dark">Jeny Doe</h5>
+                                        <p class="fw-normal mb-0">Web Designer</p>
+                                    </div>
+                                    <div class="col-sm-9 text-center text-sm-start pt-3 pt-sm-0">
+                                        <h2>Fantastic Response!</h2>
+                                        <div class="my-2"><i class="fas fa-star me-2"></i><i
+                                                class="fas fa-star me-2"></i><i class="fas fa-star me-2"></i><i
+                                                class="fas fa-star-half-alt me-2"></i><i class="far fa-star"></i></div>
+                                        <p>I was skeptical about using a website for diabetes management, but Cure has
+                                            exceeded my expectations. The personalized health tracking tools and
+                                            community support have been invaluable in helping me manage my diabetes
+                                            effectively, and see physicians, who will assist you through the whole
+                                            procedure. And all of the prescriptions, medications, and other services
+                                            they offer are 100% genuine, medically verified, and proved. I believe that
+                                            the cure staff is doing an outstanding job. Highly recommended their health
+                                            care services.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="sec6 numbers section-padding text-center pb-70">
+        <div class="container">
+            <div class="row div-main6">
+                <div class="col-md-3 text-center ">
+                    <div class="sec6-items">
+                        <span class="icon"><i class="fa fa-users"></i></span>
+                        <h2 class="counter">850</h2>
+                        <p>Happy Client</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center ">
+                    <div class="sec6-items">
+                        <span class="icon"><i class="fa fa-thumbs-up"></i></span>
+                        <h2 class="counter">230</h2>
+                        <p>Daily Use</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center ">
+                    <div class="sec6-items">
+                        <span class="icon"><i class="fa fa-bullhorn"></i></span>
+                        <h2 class="counter">9450</h2>
+                        <p>shared</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center ">
+                    <div class="sec6-items">
+                        <span class="icon"><i class="fa fa-cloud-download"></i></span>
+                        <h2 class="counter">780</h2>
+                        <p>Retina upload</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="44" class="sec-blog">
+        <div class="word-services word-blog">
+            <h2 class="text-center ">Blog</h2>
+        </div>
+
+        <div>
+            <div class="bg-holder bg-size"
+                style="background-image:url('../static/img/gallery/dot-bg.png');background-position:top left;background-size:auto;">
+            </div>
+            <!--/.bg-holder-->
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-lg-3 mb-4">
+                        <div class="card h-100 shadow card-span rounded-3"><img class="card-img-top rounded-top-3"
+                                src="{% static 'img/covid-19.png' %}" alt="news" />
+                            <div class="card-body"><span class="fs--1 text-primary me-3">Health</span>
+                                <svg class="bi bi-calendar2 me-2" xmlns="http://www.w3.org/2000/svg" width="12"
+                                    height="12" fill="currentColor" viewBox="0 0 16 16">
+
+                                </svg><span class="fs--1 text-900">Nov 21, 2022</span><span class="fs--1"></span>
+                                <h5 class="font-base fs-lg-0 fs-xl-1 my-3">HOW COVID-19:Impacts People with Diabetes
+                                </h5>
+                                <a class="stretched-link "
+                                    href="https://diabetes.org/coronavirus-covid-19/how-coronavirus-impacts-people-with-diabetes#:~:text=A%3A%20People%20with%20diabetes%20are,your%20diabetes%20is%20well%2Dmanaged">read
+                                    full article</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-6 col-lg-3 mb-4">
+                        <div class="card h-100 shadow card-span rounded-3"><img class="card-img-top rounded-top-3"
+                                src="{% static 'img/laboratories.png' %}" alt="news" />
+                            <div class="card-body"><span class="fs--1 text-primary me-3">Lifestyle</span>
+                                <svg class="bi bi-calendar2 me-2" xmlns="http://www.w3.org/2000/svg" width="12"
+                                    height="12" fill="currentColor" viewBox="0 0 16 16">
+                                </svg><span class="fs--1 text-900">Nov 25, 2021</span><span class="fs--1"></span>
+                                <h5 class="font-base fs-lg-0 fs-xl-1 my-3">Diabetes management: How lifestyle, daily
+                                    routine affect blood sugar
+
+                                </h5><a class="stretched-link"
+                                    href="https://www.mayoclinic.org/diseases-conditions/diabetes/in-depth/diabetes-management/art-20047963">read
+                                    full
+                                    article</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 mb-4">
+                        <div class="card h-100 shadow card-span rounded-3"><img class="card-img-top rounded-top-3"
+                                src="{% static 'img/nicotine.png' %}" alt="news" />
+                            <div class="card-body"><span class="fs--1 text-primary me-3">Health</span>
+                                <svg class="bi bi-calendar2 me-2" xmlns="http://www.w3.org/2000/svg" width="12"
+                                    height="12" fill="currentColor" viewBox="0 0 16 16">
+                                </svg><span class="fs--1 text-900">Nov 28, 2021</span><span class="fs--1"></span>
+                                <h5 class="font-base fs-lg-0 fs-xl-1 my-3">Simple Steps to Preventing Diabetes</h5><a
+                                    class="stretched-link"
+                                    href="https://www.hsph.harvard.edu/nutritionsource/disease-prevention/diabetes-prevention/preventing-diabetes-full-story/#:~:text=Type%202%20diabetes%20is%20largely,healthy%20diet%2C%20and%20not%20smoking.">read
+                                    full article</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 mb-4">
+                        <div class="card h-100 shadow card-span rounded-3"><img
+                                class="img-last-blog card-img-top rounded-top-3"
+                                src="{% static 'img/bruno-nascimento-PHIgYUGQPvU-unsplash (1).jpg' %}" alt="news" />
+                            <div class="card-body"><span class="fs--1 text-primary me-3">Health</span>
+                                <svg class="bi bi-calendar2 me-2" xmlns="http://www.w3.org/2000/svg" width="12"
+                                    height="12" fill="currentColor" viewBox="0 0 16 16">
+                                </svg><span class="fs--1 text-900">may 2, 2023</span><span class="fs--1"></span>
+                                <h5 class="font-base fs-lg-0 fs-xl-1 my-3">10 Exercises for Diabetes: Walking, Yoga,
+                                    Swimming, and More </h5><a class="stretched-link"
+                                    href="https://www.healthline.com/health/type-2-diabetes/top-exercises">read full
+                                    article</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="sec8" id="55">
+        <div class="container">
+            <div class="word-services ">
+                <h2 class="text-center content-us8 ">Contact Us.</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <div class="divs8-space">
+                        <span class="icon1 item7"><i class="fa fa-location-arrow iconself"
+                                aria-hidden="true"></i></span>
+                        <h3 class="item7">Address</h3>
+                        <p class="p-sec8 ">6834 Hollywood Blvd - Los Angeles CA</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="divs8-space">
+                        <span class="icon1 item7"><i class="fa fa-envelope iconself" aria-hidden="true"></i></span>
+                        <h3 class="item7">Email</h3>
+                        <p class="p-sec8 ">support@website.com</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="divs8-space">
+                        <span class="icon1 item7"><i class="fa fa-phone iconself" aria-hidden="true"></i></span>
+                        <h3 class="item7">phone</h3>
+                        <p class="p-sec8 ">6834 Hollywood Blvd - Los Angeles CA</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <form>
+                    <div class="row text-center">
+                        <div class="col-md-6 ">
+                            <div class="form-group has-error has-danger">
+                                <input id="form_name" type="text" name="name" placeholder="Name" required="required">
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input id="form_email" type="email" name="email" placeholder="Email"
+                                    required="required">
+                            </div>
+
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <div class="form-group">
+                                <textarea id="form_message" name="message" placeholder="Message" rows="4"
+                                    required="required"></textarea>
+                            </div>
+
+                        </div>
+
+                        <div>
+                            <button class="bg-black  btn-sm rounded-pill   text-white but-sec8 ">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section -->
+    <footer class="footer_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4  footer_col">
+                    <div class="footer_contact">
+                        <h4>
+                            Reach at..
+                        </h4>
+                        <div class="contact_link_box">
+
+                            <a href="">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <span>
+                                    Call +01 1123455550
+                                </span>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <span>
+                                    cure@gmail.com
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer_social">
+                        <a href="">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4  footer_col">
+                    <div class="footer_detail">
+                        <h4>
+                            About
+                        </h4>
+                        <p>
+                            Our mission is to help individuals take control of their health by providing accurate
+                            information and the latest technology for early detection. We offer a range of features to
+                            support individuals with diabetes, including educational materials, health tracking tools,
+                            and access to a community of experts and fellow individuals with diabetes.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4  mx-auto footer_col">
+                    <div class="footer_link_box">
+                        <h4>
+                            Links
+                        </h4>
+                        <div class="footer_links">
+                            <a class="active" href="#11">
+                                Home
+                            </a>
+                            <a class="" href="#22">
+                                Services
+                            </a>
+                            <a class="" href="#33">
+                                About
+                            </a>
+                            <a class="" href="#44">
+                                Blog
+                            </a>
+                            <a class="" href="#55">
+                                Contact Us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- footer section -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://kit.fontawesome.com/0481f181c1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script src="{% static 'js/jquery-3.6.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger intent="WELCOME" chat-title="Diabetes-Assistant" agent-id="4772beef-ae03-48eb-898f-a3fc70d67f58"
+    language-code="en" chat-icon="https://cdn-icons-png.flaticon.com/512/4807/4807695.png"></df-messenger>

@@ -1,0 +1,47 @@
+.body{
+    font-family: var(--bs-body-font-family);
+}
+.sec1{
+    background-image: url(../img/vecteezy_blurred-backgrounds-blur-abstract-backgrounds-beautiful_8035365_903.jpg);
+    background-position: center center;
+    height: 100vh;
+    background-size: cover;
+    background-color: rgb(0 0 0 / 21%);
+    background-blend-mode: overlay;
+    padding-top: 80px;
+    
+}
+.bold-part{
+    padding-top: 100px;
+    padding-bottom:100px ;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: white;
+    box-shadow: 1px 2px 25px rgb(0 0 0 / 44%);;
+}
+.con-word{
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.sec-words{
+    font-size: 30px;
+}
+.btn-back{
+    padding-top: 50px;
+}
+.btn-1{
+    padding: 15px 30px;
+    background-color: rgb(24, 24, 24);
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.btn-1:hover{
+    padding: 15px 30px;
+    background-color: rgb(188 142 93);
+    text-decoration: none;
+    color: rgb(252, 251, 255);
+    border-radius: 5px;
+    font-size: 20px;
+}

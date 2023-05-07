@@ -1,0 +1,216 @@
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/all.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/style-retin-scan.css' %}" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="{% static 'img/for v.png' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,500;1,400&family=Poppins:wght@200;700&display=swap"
+        rel="stylesheet">
+    <title>Retin Scan</title>
+</head>
+
+<body>
+
+
+
+    <!-- sec-nav -->
+    <body>
+        <section class="sec1" id="11">
+            <nav id="myHeader" class="navbar navbar-expand-lg  header p-0 fadeIn " data-wow-delay="0.1s">
+                <div class="container-fluid">
+                    <div class="logo-div ">
+                        <a href="{% url 'index' %}">
+                            <img class="navbar-brand logo " src="{% static 'img/colorful logo.png' %}" href="#"></img>
+                        </a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto nav-ul  ">
+                            <li class="nav-item home-word ">
+                                <a class="nav-link active " aria-current="page" href="#11">HOME </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#22">SERVICES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#33">ABOUT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="#44">BLOG</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="#55">CONTACT US</a>
+                            </li>
+                        </ul>
+                        <a href="../Arabic/index.html" class="arabic-btn">العربية</a>
+                        <a class="sign-btn  btn-sm rounded-pill " href="{% url 'signin' %}">Sign In</a>
+                    </div>
+                </div>
+            </nav>
+
+
+
+    <!-- section Retin Scan -->
+    <div class="cont-words text-center">
+        <h1 class="title-larg">Submit your Retina Scan</h1>
+        <p class="title-s"> Upload jpg or png Format.</p>
+    </div>
+    <div class=" explin-retin text-center">
+        <p class="titles-retin"> Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
+            <br> quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem!
+        </p>
+    </div>
+    <section class="sec-retin">
+        <div class="container ">
+
+            
+            <!--Content description for the feature -->
+            <div class="content text-center">
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class=" photo-box">
+                        <div class="the-feature ">
+                            <div class="upp  " onclick="defaultBtnActive()">
+                                <div class="imagee ">
+                                    <img class="img2" src=" " alt="">
+                                </div>
+                                <div class="content2">
+                                    <div class="icon "><i class="fas fa-cloud-upload-alt"></i> </div>
+                                    <div class="text-2 ">Click To Upload Your File</div>
+                                    <div class="cancel-btn "> <i class=" fas fa-times"> </i></div>
+                                    <div class="file-name ">File Name Here</div>
+                                </div>
+                            </div>
+                            <input class="default-btn" type="file" id="myFile" name="image" hidden>
+                            <!-- <div class="choose-file"><button onclick="defaultBtnActive()" class="custom-btn">Choose a File</button></div> -->
+                        </div>
+                    </div>
+                    <!-- button to upload the rays and then submit it  -->
+
+                    <div class="buttons">
+                        <div class="text-btn2">
+                            <input class="sub-button btn btn-dark" type="submit">
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- footer section -->
+    <footer class="footer_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4  footer_col">
+                    <div class="footer_contact">
+                        <h4>
+                            Reach at..
+                        </h4>
+                        <div class="contact_link_box">
+
+                            <a href="">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <span>
+                                    Call +01 1123455550
+                                </span>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <span>
+                                    cure@gmail.com
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer_social">
+                        <a href="">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4  footer_col">
+                    <div class="footer_detail">
+                        <h4>
+                            About
+                        </h4>
+                        <p>
+                            Our mission is to help individuals take control of their health by providing accurate
+                            information and the latest technology for early detection. We offer a range of features to
+                            support individuals with diabetes, including educational materials, health tracking tools,
+                            and access to a community of experts and fellow individuals with diabetes.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4  mx-auto footer_col">
+                    <div class="footer_link_box">
+                        <h4>
+                            Links
+                        </h4>
+                        <div class="footer_links">
+                            <a class="active" href="index.html#11">
+                                Home
+                            </a>
+                            <a class="" href="index.html#22">
+                                Services
+                            </a>
+                            <a class="" href="index.html#33">
+                                About
+                            </a>
+                            <a class="" href="index.html#44">
+                                Blog
+                            </a>
+                            <a class="" href="index.html#55">
+                                Contact Us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- footer section -->
+
+
+
+    <script src="https://kit.fontawesome.com/0481f181c1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+        <script src="{% static 'js/jquery-3.6.1.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'js/main-retin.js' %}"></script>
+
+</body>
+
+</html>

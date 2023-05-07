@@ -1,0 +1,224 @@
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Steps</title>
+    <link href="{% static 'css/all.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/style-early-diagnosis.css' %}" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="{% static 'img/for v.png' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@600&family=Nunito+Sans:ital,wght@1,300&family=Nunito:ital,wght@0,500;1,400&family=Poppins:wght@200;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section class="sec1" id="11">
+        <nav id="myHeader" class="navbar navbar-expand-lg  header p-0 fadeIn " data-wow-delay="0.1s">
+            <div class="container-fluid">
+                <div class="logo-div ">
+                    <a href="{% url 'index' %}">
+                        <img class="navbar-brand logo " src="{% static 'img/colorful logo.png' %}" href="#"></img>
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto nav-ul  ">
+                        <li class="nav-item home-word ">
+                            <a class="nav-link active " aria-current="page" href="#11">HOME </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#22">SERVICES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#33">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#44">BLOG</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#55">CONTACT US</a>
+                        </li>
+                    </ul>
+                    <a href="../Arabic/index.html" class="arabic-btn">العربية</a>
+                    <a class="sign-btn  btn-sm rounded-pill " href="{% url 'signin' %}">Sign In</a>
+                </div>
+            </div>
+        </nav>
+
+
+    <!-- sec fe steps  -->
+    <div class="sec-steps">
+        <div class="container">
+            <div class="steps-words">
+                <h2 class=" title-1">what diabetaes must do? </h2>
+                <h3>please follow this steps</h3>
+                <p class="step-line ">1- Know what to do every day scheduling your day and your meals</p>
+                <p class="step-line">2- After early detection and the result is positive, please go to the doctor for
+                    follow-up,<br>Take your medicines for diabetes and any other health problems even when you feel good.</p>
+                <p class="step-line">3- Check your feet every day for cuts, blisters, red spots, and swelling.</p>
+                <p class="step-line">4- Brush your teeth and floss every day to keep your mouth, teeth, and gums healthy.
+                </p>
+                <p class="step-line">5- Stop smoking.</p>
+                <p class="step-line">6- Keep track of your blood sugar</p>
+                <p class="step-line">7- Go weigh and diet </p>
+                <p class="step-line">9- do exercise, walking</p>
+            </div>
+            <div class="steps-words">
+                <h2 class=" title-1">how to Support and deal with a diabetic patient? </h2>
+                <h3>please follow this steps</h3>
+                <p class="step-line">1- Know what diabetes is and how it's treated.</p>
+                <p class="step-line">2- Be open to the kind of help they want and don't judge.</p>
+                <p class="step-line">3- Look out for the symptoms of low blood sugar.</p>
+                <p class="step-line">4- Serve a variety of foods.</p>
+                <p class="step-line">5- Be a workout buddy.</p>
+                <p class="step-line">6- Offer mental and emotional support. </p>
+                <!-- don't make -->
+                <h2 class=" title-1">What should not do with an diabetic patient?</h2>
+                <p class="step-line">1- Patients who are on insulin or oral hypoglycemic, They should not skip a meal
+                    assuming that it can.</p>
+                <p class="step-line">2- Do not eat white bread, chips, and pastries, which quickly increase blood sugar.
+                </p>
+                <p class="step-line">3- Avoid processed foods and meats as they will be rich in salt and oil.</p>
+                <p class="step-line">4- Restrict fried and fatty foods.</p>
+            </div>
+
+            <div class="steps-words">
+                <h2 class=" title-1">Symptoms of a diabetic coma</h2>
+                <h4>- Symptoms of high or low blood sugar usually appear before a diabetic coma:
+                    <br> <br>If your blood sugar level is too high, you may experience:
+                </h4>
+                <p class="step-line ">"extreme thirst"  ,
+                    "frequent urination" ,
+                    "Blurred vision" ,
+                    "tiredness or weakness" ,<br>
+                    "Headache" ,
+                    "Nausea and vomiting" ,
+                    "shortness of breath",
+                    "stomachache" ,
+                    "Fruity breath smell" ,<br>
+                    "Very dry mouth" ,
+                    "Low blood sugar (hypoglycemia)" .</p>
+
+            </div>
+            <di>
+                <h4>If your blood sugar level is too low, you may experience:
+                </h4>
+                <p class="step-line ">"Shivering" ,
+                    "anxiety" ,
+                    "tiredness or drowsiness" ,
+                    "Weakness" ,
+                    "sweating" ,<br>
+                    "hunger" ,
+                    "Feeling of tingling in the skin" ,
+                    "dizziness or lightheadedness" ,<br>
+                    "Headache" ,
+                    "difficulty speaking" ,
+                    "Blurry vision" ,
+                    "confusion" ,
+                    "Unconsciousness" .</p>
+            </di>
+
+        </div>
+
+
+
+
+
+        <!-- footer section -->
+        <footer class="footer_section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4  footer_col">
+                        <div class="footer_contact">
+                            <h4>
+                                Reach at..
+                            </h4>
+                            <div class="contact_link_box">
+                                <a href="">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <span>
+                                        Call +01 1123455550
+                                    </span>
+                                </a>
+                                <a href="">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    <span>
+                                        cure@gmail.com
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="footer_social">
+                            <a href="">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4  footer_col">
+                        <div class="footer_detail">
+                            <h4>
+                                About
+                            </h4>
+                            <p>
+                                Our mission is to help individuals take control of their health by providing accurate
+                                information and the latest technology for early detection. We offer a range of features
+                                to support individuals with diabetes, including educational materials, health tracking
+                                tools, and access to a community of experts and fellow individuals with diabetes.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4  mx-auto footer_col">
+                        <div class="footer_link_box">
+                            <h4>
+                                Links
+                            </h4>
+                            <div class="footer_links">
+                                <a class="active" href="index.html#11">
+                                    Home
+                                </a>
+                                <a class="" href="index.html#22">
+                                    Services
+                                </a>
+                                <a class="" href="index.html#33">
+                                    About
+                                </a>
+                                <a class="" href="index.html#44">
+                                    Blog
+                                </a>
+                                <a class="" href="index.html#55">
+                                    Contact Us
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+        <!-- footer section -->
+
+
+        <script src="https://kit.fontawesome.com/0481f181c1.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

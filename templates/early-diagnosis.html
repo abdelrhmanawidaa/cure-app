@@ -1,0 +1,360 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Early Diagnosis</title>
+    <link href="{% static 'css/all.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/style-early-diagnosis.css' %}" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="{% static 'img/for v.png' %}">
+
+</head>
+
+<body>
+    <section class="sec1" id="11">
+        <nav id="myHeader" class="navbar navbar-expand-lg  header p-0 fadeIn " data-wow-delay="0.1s">
+            <div class="container-fluid">
+                <div class="logo-div ">
+                    <a href="{% url 'index' %}">
+                        <img class="navbar-brand logo " src="{% static 'img/colorful logo.png' %}" href="#"></img>
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto nav-ul  ">
+                        <li class="nav-item home-word ">
+                            <a class="nav-link active " aria-current="page" href="#11">HOME </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#22">SERVICES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#33">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#44">BLOG</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#55">CONTACT US</a>
+                        </li>
+                    </ul>
+                    <a href="../Arabic/index.html" class="arabic-btn">العربية</a>
+                    <a class="sign-btn  btn-sm rounded-pill " href="{% url 'signin' %}">Sign In</a>
+                </div>
+            </div>
+        </nav>
+
+
+
+    <!-- fe -->
+
+
+    <div class="sec1">
+        <!-- <div class="cont-words text-center">
+            <div class="text-center main-p">
+                <h2 class="title-1">Answers the following Questions</h2>
+            </div> 
+        </div> -->
+        <div class="container box-cont">
+            <div class="text-center main-p">
+                <h2 class="title-1">Answers the following Questions</h2>
+            </div>
+            <form method= "POST" action="{% url 'early-result' %}" >
+                {% csrf_token %}
+                
+                <div class="qs">
+                    <p class="main-q">- Age? </p>
+                    <input class="form-control age-input" type="number" id="quantity" name="quantity" min="0" max="100"
+                        required>
+                </div>
+                <div class="qs">
+                    <p class="main-q">- Male or female? </p>
+                    <div>
+                        <input class="form-check-input" type="radio" name="cho0" value="1" id="0" required>
+                        <lable for="0">Male</lable>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="cho0" value="0" id="00" required>
+                        <lable for="00">female</lable>
+                    </div>
+
+                </div>
+                <div class="qs">
+                    <p class="main-q"> -Do you suffer from frequent urination? </p>
+                    <div>
+                        <input class="form-check-input" type="radio" name="cho" value="1" id="1" required>
+                        <lable for="1">Yes</lable>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="cho" value="0" id="2" required>
+                        <lable for="2">No</lable>
+                    </div>
+
+                </div>
+
+                <div class="qs">
+                    <p class="main-q"> -Do you suffer from increased thirst? </p>
+                    <div>
+                        <input class="form-check-input" type="radio" name="cho1" value="1" id="3" required>
+                        <lable for="3">Yes</lable>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="cho1" value="0" id="4" required>
+                        <lable for="4">No</lable>
+                    </div>
+
+                </div>
+
+                <div class="qs">
+                    <p class="main-q"> -Did you experience sudden wight loss? </p>
+                    <div>
+                        <input class="form-check-input" type="radio" name="cho2" value="1" id="5" required>
+                        <lable for="5">Yes</lable>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="cho2" value="0" id="6" required>
+                        <lable for="6">No</lable>
+                    </div>
+
+                </div>
+                <div class="qs">
+                    <p class="main-q"> -Do you experience episodes of feeling weak? </p>
+                    <div>
+                        <input class="form-check-input" type="radio" name="cho3" value="1" id="7" required>
+                        <lable for="7">Yes</lable>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="cho3" value="0" id="8" required>
+                        <lable for="8">No</lable>
+                    </div>
+
+                </div>
+                <div class="qs">
+                    <p class="main-q"> -Do you feel extreme/ excessive hunger? </p>
+                    <div>
+                        <input class="form-check-input" type="radio" name="cho4" value="1" id="9" required>
+                        <lable for="9">Yes</lable>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="cho4" value="0" id="10" required>
+                        <lable for="10">No</lable>
+                    </div>
+
+                </div>
+                <div class="qs">
+                    <p class="main-q"> -Did you have yeast infection? </p>
+                    <div>
+                        <input class="form-check-input" type="radio" name="cho5" value="1" id="11" required>
+                        <lable for="11">Yes</lable>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="cho5" value="0" id="12" required>
+                        <lable for="12">No</lable>
+                    </div>
+
+                </div>
+                <div class="qs">
+                    <p class="main-q">-Do you experience blurred vision? </p>
+                    <div>
+                        <input class="form-check-input" type="radio" name="cho6" value="1" id="13" required>
+                        <lable for="13">Yes</lable>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="cho6" value="0" id="14" required>
+                        <lable for="14">No</lable>
+                    </div>
+
+                </div>
+
+                <div class="qs">
+                    <p class="main-q">- Do you experience itching? </p>
+                    <div>
+                        <input class="form-check-input" type="radio" name="cho7" value="1" id="15" required>
+                        <lable for="15">Yes</lable>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="cho7" value="0" id="16" required>
+                        <lable for="16">No</lable>
+                    </div>
+
+                </div>
+                <div class="qs">
+                    <p class="main-q">- Do you experience irritability? </p>
+                    <div>
+                        <input class="form-check-input" type="radio" name="cho8" value="1" id="17" required>
+                        <lable for="17">Yes</lable>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="cho8" value="0" id="18" required>
+                        <lable for="18">No</lable>
+                    </div>
+                </div>
+                <div class="qs">
+                    <p class="main-q">- Did you notice delayed healing when wounded? </p>
+                    <div>
+                        <input class="form-check-input" type="radio" name="cho9" value="1" id="19" required>
+                        <lable for="19">Yes</lable>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="cho9" value="0" id="20" required>
+                        <lable for="20">No</lable>
+                    </div>
+                </div>
+
+                <div class="qs">
+                    <p class="main-q">- Did you experience weakening of a muscle or group of muscles? </p>
+                    <div>
+                        <input class="form-check-input" type="radio" name="cho11" value="1" id="21" required>
+                        <lable for="21">Yes</lable>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="cho11" value="0" id="22" required>
+                        <lable for="22">No</lable>
+                    </div>
+                </div>
+
+
+                <div class="qs">
+                    <p class="main-q">- Do you experience muscle stiffness? </p>
+                    <div>
+                        <input class="form-check-input" type="radio" name="cho12" value="1" id="23" required>
+                        <lable for="23">Yes</lable>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="cho12" value="0" id="24" required>
+                        <lable for="24">No</lable>
+                    </div>
+                </div>
+
+
+                <div class="qs">
+                    <p class="main-q">- Did you experience hair loss? </p>
+                    <div>
+                        <input class="form-check-input" type="radio" name="cho13" value="1" id="25" required>
+                        <lable for="25">Yes</lable>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="cho13" value="0" id="26" required>
+                        <lable for="26">No</lable>
+                    </div>
+                </div>
+
+
+                <div class="qs">
+                    <p class="main-q">- Are you considered obese? </p>
+                    <div>
+                        <input class="form-check-input" type="radio" name="cho14" value="1" id="27" required>
+                        <lable for="27">Yes</lable>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="cho14" value="0" id="28" required>
+                        <lable for="28">No</lable>
+                    </div>
+                </div>
+
+
+                <div class="text-center ">
+                    <input class="sub-button btn btn-dark " type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- footer section -->
+    <footer class="footer_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4  footer_col">
+                    <div class="footer_contact">
+                        <h4>
+                            Reach at..
+                        </h4>
+                        <div class="contact_link_box">
+                            <a href="">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <span>
+                                    Call +01 1123455550
+                                </span>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <span>
+                                    cure@gmail.com
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer_social">
+                        <a href="">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4  footer_col">
+                    <div class="footer_detail">
+                        <h4>
+                            About
+                        </h4>
+                        <p>
+                            Our mission is to help individuals take control of their health by providing accurate
+                            information and the latest technology for early detection. We offer a range of features to
+                            support individuals with diabetes, including educational materials, health tracking tools,
+                            and access to a community of experts and fellow individuals with diabetes.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4  mx-auto footer_col">
+                    <div class="footer_link_box">
+                        <h4>
+                            Links
+                        </h4>
+                        <div class="footer_links">
+                            <a class="active" href="index.html#11">
+                                Home
+                            </a>
+                            <a class="" href="index.html#22">
+                                Services
+                            </a>
+                            <a class="" href="index.html#33">
+                                About
+                            </a>
+                            <a class="" href="index.html#44">
+                                Blog
+                            </a>
+                            <a class="" href="index.html#55">
+                                Contact Us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- footer section -->
+
+
+    <script src="https://kit.fontawesome.com/0481f181c1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

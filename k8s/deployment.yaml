@@ -1,0 +1,22 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: graduation-project 
+  namespace: python-app
+  labels:
+    app: django-app
+spec:
+  selector:
+    matchLabels:
+      app: django-app
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: django-app
+    spec:
+      containers:
+      - name: graduation-app
+        image: abdelrhmanawidaa/graduation-app:latest
+        ports:
+        - containerPort: 8000

@@ -1,0 +1,349 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Food Points</title>
+  <link href="{% static 'css/all.css' %}" rel="stylesheet">
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/food-FAQ.css' %}" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa&family=Open+Sans:wght@300&family=PT+Sans:ital,wght@0,700;1,700&display=swap"
+    rel="stylesheet">
+    
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/a7e29101f9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <section class="sec1" id="11">
+      <nav id="myHeader" class="navbar navbar-expand-lg  header p-0 fadeIn " data-wow-delay="0.1s">
+          <div class="container-fluid">
+              <div class="logo-div ">
+                  <a href="{% url 'index' %}">
+                      <img class="navbar-brand logo " src="{% static 'img/colorful logo.png' %}" href="#"></img>
+                  </a>
+              </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ms-auto nav-ul  ">
+                      <li class="nav-item home-word ">
+                          <a class="nav-link active " aria-current="page" href="#11">HOME </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#22">SERVICES</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#33">ABOUT</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link " href="#44">BLOG</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link " href="#55">CONTACT US</a>
+                      </li>
+                  </ul>
+                  <a href="../Arabic/index.html" class="arabic-btn">العربية</a>
+                  <a class="sign-btn  btn-sm rounded-pill " href="{% url 'signin' %}">Sign In</a>
+              </div>
+          </div>
+      </nav>
+
+  <!-- fe food points -->
+  <div class="sec-food-points">
+
+
+    <div class="container col-xxl-8 px-4 py-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img src="{% static 'images/aa.png' %}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500"
+            loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold lh-1 mb-3 ol-no-wrap">Calculate your points </h1>
+          <p class="lead">this is a small application that you can calculate your Available food, please first enter
+            your Weight to Calculate your Points, then you can choose from food table and see how much food that you
+            will consume. </p>
+        </div>
+      </div>
+    </div>
+    <div class="b-example-divider"></div>
+    <div class="container col-xxl-8 px-4 py-5 layer">
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3 ">Tips and Advice </h1>
+        <ul class="ol-no-wrap">
+
+          <li class="list-group-item">
+            <dt><i class="fa-solid fa-seedling"></i> This diet (Food Point System) depend on the calories, amount of fat
+              and fiber in the food</dt>
+
+            <ul>
+              <li class="list-group-item"><i class="fa-solid fa-arrow-right"></i> Points = (Calories / 50) + (Fat / 12)
+                - (Fiber / 5)</li>
+              <li class="list-group-item"><i class="fa-solid fa-arrow-right"></i> Minimum 20 points per day</li>
+              <li class="list-group-item"><i class="fa-solid fa-arrow-right"></i> All you have to do after get your
+                counted points is to divide them during the day into meals</li>
+            </ul>
+
+          </li>
+
+          <li class="list-group-item">
+            <dt><i class="fa-solid fa-seedling"></i> Drink water at least 6-8 glasses a day</dt>
+          </li>
+          <li class="list-group-item">
+            <dt><i class="fa-solid fa-seedling"></i> Make walking and exercise are an essential part of the day</dt>
+          </li>
+          <li class="list-group-item">
+            <dt><i class="fa-solid fa-seedling"></i> Eat vegetables and fruits and make them an essential part of your
+              day</dt>
+          </li>
+          <li class="list-group-item">
+            <dt><i class="fa-solid fa-seedling"></i> Eat foods that contain a lot of fiber</dt>
+          </li>
+          <li class="list-group-item">
+            <dt><i class="fa-solid fa-seedling"></i> Reducing fat to a maximum of 2 tablespoons per day and reducing
+              white toxins (sugar, salt and white flour)</dt>
+          </li>
+          <li class="list-group-item">
+            <dt><i class="fa-solid fa-seedling"></i> Staying away from sugars, fats, soft drinks, and starches helps
+              regulate the rate of sugar in the body and lose weight</dt>
+          </li>
+          <li class="list-group-item">
+            <dt><i class="fa-solid fa-seedling"></i> We start our day by drinking a cup of warm water in the morning
+              with lemon</dt>
+          </li>
+          <li class="list-group-item">
+            <dt><i class="fa-solid fa-seedling"></i> Unlimited amounts of broccoli, carrots, cucumber, zucchini,
+              lettuce, spinach and vegetable soup are allowed.</dt>
+          </li>
+          <li class="list-group-item">
+            <dt><i class="fa-solid fa-seedling"></i> Have cheat day per week</dt>
+          </li>
+        </ul>
+        <dl class="list-group-item">
+          <dt><i class="fa-solid fa-seedling"></i> Weight loss rate :</dt>
+          <ul>
+            <li class="list-group-item"><i class="fa-solid fa-arrow-right"></i> From 63 to 69 1 kilo per week</li>
+            <li class="list-group-item"><i class="fa-solid fa-arrow-right"></i> From 70 to 83 1.5 kilos per week</li>
+            <li class="list-group-item"><i class="fa-solid fa-arrow-right"></i> From 84 to 100 2 kilos per week</li>
+          </ul>
+        </dl>
+      </div>
+    </div>
+    <div class="b-example-divider"></div>
+    <div class="container col-xxl-8 px-4 py-5">
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3 ol-no-wrap">Start enjoying your new healthy lifestyle </h1>
+      </div>
+    </div>
+    <div class="user_info text-center">
+      Weight:
+      <input class="form-control-sm" value="0" type="number" name="age" id="weight" oninput="age()">
+
+      Your Available Point:
+      <input class="form-control-sm" readonly type="number" name="points" id="points"><br><br>
+    </div>
+
+    <div class="container">
+      <nav>
+        <div class="nav nav-tabs nav-justified" id="nav-tab" role="tablist">
+          <button class="nav-link active" id="nav-dairy-tab" data-bs-toggle="tab" data-bs-target="#nav-dairy"
+            type="button" role="tab" aria-controls="nav-dairy" aria-selected="true">
+            <img class="img-1" src="{% static 'images/dairy.svg' %}"> <br>Dairy Products
+          </button>
+
+          <button class="nav-link" id="nav-meat-tab" data-bs-toggle="tab" data-bs-target="#nav-meat" type="button"
+            role="tab" aria-controls="nav-meat" aria-selected="false">
+            <img class="img-1" src="{% static 'images/meat.svg' %}"> <br>meats and chicken
+          </button>
+
+          <button class="nav-link" id="nav-vegetables-tab" data-bs-toggle="tab" data-bs-target="#nav-vegetables"
+            type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
+            <img class="img-1" src="{% static 'images/vegetables.svg' %}"> <br>vegetables and fruits
+          </button>
+
+          <button class="nav-link" id="nav-starches-tab" data-bs-toggle="tab" data-bs-target="#nav-starches"
+            type="button" role="tab" aria-controls="nav-starches" aria-selected="false">
+            <img class="img-1" src="{% static 'images/potato-bread.svg' %}"> <br>Starches
+          </button>
+
+          <button class="nav-link" id="nav-junk-tab" data-bs-toggle="tab" data-bs-target="#nav-junk-food" type="button"
+            role="tab" aria-controls="nav-junk" aria-selected="false">
+            <img class="img-1" src="{% static 'images/fast-food.svg' %}"> <br>Fast Food
+          </button>
+
+          <button class="nav-link" id="nav-other-tab" data-bs-toggle="tab" data-bs-target="#nav-other" type="button"
+            role="tab" aria-controls="nav-other" aria-selected="false">
+            <img class="img-1" src="{% static 'images/cookie.svg' %}"> <br>Others
+          </button>
+
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-dairy" role="tabpanel" aria-labelledby="nav-dairy-tab">
+          <ul>
+
+            <li class="list-group-item"> <i class="fa-solid fa-cheese"></i> Milk 200ml: <input type="number" id="milk"
+                name="milk" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-cheese"></i> Milk 50% fat 200ml: <input type="number"
+                id="milk50" name="milk50" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-cheese"></i> Milk 0% fat (skimmed) 200ml: <input
+                type="number" id="skimmed" name="skimmed" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-cheese"></i> Milk powder 5gm: <input type="number"
+                id="powder" name="powder" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-cheese"></i> Feta cheese 30gm: <input type="number"
+                id="feta" name="feta" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-cheese"></i> Cheddar cheese one slice: <input
+                type="number" id="cheddar" name="cheddar" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-cheese"></i> Turkey cheese one slice: <input
+                type="number" id="turkey" name="turkey" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-cheese"></i> Yogurt 125gm: <input type="number"
+                id="yogurt" name="yogurt" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-cheese"></i> Light yogurt 125gm: <input type="number"
+                id="lightYogurt" name="lightYogurt" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-cheese"></i> Boiled egg: <input type="number"
+                id="boiledEgg" name="boiledEgg" oninput="calc();" value="0" min="0" max="10"></li>
+          </ul>
+
+        </div>
+        <div class="tab-pane fade" id="nav-meat" role="tabpanel" aria-labelledby="nav-meat-tab">
+
+          <ul>
+            <li class="list-group-item"> <i class="fa-solid fa-drumstick-bite"></i> Grilled or boiled chicken breast
+              100gm: <input type="number" id="chickenBreast" name="chickenBreast" oninput="calc();" value="0" min="0"
+                max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-drumstick-bite"></i> 1/4 chicken: <input type="number"
+                id="quarterChicken" name="quarterChicken" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-drumstick-bite"></i> 1/4 fried (with fat) chicken: <input
+                type="number" id="friedChicken" name="friedChicken" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-drumstick-bite"></i> Slice of turkey 100gm: <input
+                type="number" id="turkeySlice" name="turkeySlice" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-drumstick-bite"></i> Liver (all kinds) 100gm: <input
+                type="number" id="liver" name="liver" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-drumstick-bite"></i> Beefsteak 100gm: <input
+                type="number" id="beefSteak" name="beefSteak" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-drumstick-bite"></i> Beef burger: <input type="number"
+                id="beefBurger" name="beefBurger" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-drumstick-bite"></i> Chicken burger: <input type="number"
+                id="chickenBurger" name="chickenBurger" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-drumstick-bite"></i> Hotdog 70gm: <input type="number"
+                id="hotdog" name="hotdog" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-drumstick-bite"></i> Salmon 50gm: <input type="number"
+                id="salmon" name="salmon" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-drumstick-bite"></i> Grilled shrimp 120gm: <input
+                type="number" id="grilledShrimp" name="grilledShrimp" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-drumstick-bite"></i> Tuna 100gm: <input type="number"
+                id="tuna" name="tuna" oninput="calc();" value="0" min="0" max="10"></li>
+          </ul>
+
+        </div>
+        <div class="tab-pane fade" id="nav-vegetables" role="tabpanel" aria-labelledby="nav-vegetables-tab">
+
+          <ul>
+
+            <li class="list-group-item"> <i class="fa-solid fa-carrot"></i> Three dates, cherry and berries, apple:
+              <input type="number" id="fruits1" name="fruits1" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-carrot"></i> Fruitsalad, tangerine, guava, peach, half
+              mango, kiwi: <input type="number" id="fruits2" name="fruits2" oninput="calc();" value="0" min="0"
+                max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-carrot"></i> Banana, watermelon, strawberry, 15 grapes:
+              <input type="number" id="fruits3" name="fruits3" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-carrot"></i> Orange, pineapple, apricot, grapefruit:
+              <input type="number" id="fruits4" name="fruits4" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-carrot"></i> Kusa, lettuce, carrot, cucumber (all kinds
+              of vegetables): <input type="number" id="vegetables" name="vegetables" oninput="calc();" value="0" min="0"
+                max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-carrot"></i> Cooked peas: <input type="number" id="peas"
+                name="peas" oninput="calc();" value="0" min="0" max="10"></li>
+          </ul>
+
+        </div>
+        <div class="tab-pane fade" id="nav-starches" role="tabpanel" aria-labelledby="nav-starches-tab">
+          <ul>
+            <li class="list-group-item"> <i class="fa-solid fa-bread-slice"></i> Cornflakes (2-4 points): <input
+                type="number" id="cornflakes" name="cornflakes" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-bread-slice"></i> Boiled/grilled potatoes: <input
+                type="number" id="potatoes" name="potatoes" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-bread-slice"></i> Fries 100 grams : <input type="number"
+                id="fries1" name="fries1" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-bread-slice"></i> Rice/Pasta/Fata 71 grams : <input
+                type="number" id="ricePastaFata" name="ricePastaFata" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-bread-slice"></i> Bread 100gm: <input type="number"
+                id="bread" name="bread" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-bread-slice"></i> Brown/White toast: <input type="number"
+                id="toast" name="toast" oninput="calc();" value="0" min="0" max="10"></li>
+          </ul>
+
+        </div>
+        <div class="tab-pane fade" id="nav-junk-food" role="tabpanel" aria-labelledby="nav-junk-tab">
+
+          <ul>
+            <li class="list-group-item"> <i class="fa-solid fa-pizza-slice"></i> Slice pizza: <input type="number"
+                id="pizza" name="pizza" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-burger"></i> Shawarma: <input type="number" id="shawarma"
+                name="shawarma" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-pizza-slice"></i> KFC zinger sandwich: <input
+                type="number" id="kfcSandwich" name="kfcSandwich" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-burger"></i> 4 grapes leaves: <input type="number"
+                id="grapeLeaves" name="grapeLeaves" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-pizza-slice"></i> Fries with ketchup and mayonnaise:
+              <input type="number" id="fries2" name="fries2" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-burger"></i> Soup: <input type="number" id="soup"
+                name="soup" oninput="calc();" value="0" min="0" max="10"></li>
+          </ul>
+
+        </div>
+        <div class="tab-pane fade" id="nav-other" role="tabpanel" aria-labelledby="nav-other-tab">
+
+          <ul>
+            <li class="list-group-item"> <i class="fa-solid fa-cookie"></i> Popcorn 20gm: <input type="number"
+                id="popcorn" name="popcorn" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-cookie"></i> Oats 25gm: <input type="number" id="oats"
+                name="oats" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-cookie"></i> Hummus 100gm: <input type="number"
+                id="hummus" name="hummus" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-cookie"></i> Beans 43 grams: <input type="number"
+                id="beans" name="beans" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-cookie"></i> Hot chocolate: <input type="number"
+                id="hotChocolate" name="hotChocolate" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-cookie"></i> Tea of all kinds: <input type="number"
+                id="tea" name="tea" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-cookie"></i> Juices 200ml: <input type="number"
+                id="juice" name="juice" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-cookie"></i> Latte/Cappuccino: <input type="number"
+                id="latteCappuccino" name="latteCappuccino" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-cookie"></i> Icecream: <input type="number" id="iceCream"
+                name="iceCream" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-cookie"></i> 15-20 nuts: <input type="number" id="nuts"
+                name="nuts" oninput="calc();" value="0" min="0" max="10"></li>
+            <li class="list-group-item"> <i class="fa-solid fa-cookie"></i> Digestive/Tuc biscuit: <input type="number"
+                id="biscuit" name="biscuit" oninput="calc();" value="0" min="0" max="10"></li>
+          </ul>
+
+        </div>
+
+      </div>
+      <br>
+      <div class="fixed-bottom text-center fixed-nav-bottom">
+        Total Points : <input type="text" id="total" name="total" readonly value="0">
+      </div>
+    </div>
+    <br>
+    <br>
+  </div>
+
+
+  <script src="{% static 'js/app.js' %}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+</body>

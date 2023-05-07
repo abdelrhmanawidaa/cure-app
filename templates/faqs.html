@@ -1,0 +1,390 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FAQS</title>
+    <link href="{% static 'css/food-FAQ.css' %}" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa&family=Open+Sans:wght@300&family=PT+Sans:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a7e29101f9.js" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <section class="sec1" id="11">
+        <nav id="myHeader" class="navbar navbar-expand-lg  header p-0 fadeIn " data-wow-delay="0.1s">
+            <div class="container-fluid">
+                <div class="logo-div ">
+                    <a href="{% url 'index' %}">
+                        <img class="navbar-brand logo " src="{% static 'img/colorful logo.png' %}" href="#"></img>
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto nav-ul  ">
+                        <li class="nav-item home-word ">
+                            <a class="nav-link active " aria-current="page" href="#11">HOME </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#22">SERVICES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#33">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#44">BLOG</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#55">CONTACT US</a>
+                        </li>
+                    </ul>
+                    <a href="../Arabic/index.html" class="arabic-btn">العربية</a>
+                    <a class="sign-btn  btn-sm rounded-pill " href="{% url 'signin' %}">Sign In</a>
+                </div>
+            </div>
+        </nav>
+
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img src="{% static 'images/faqs.png' %}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+          </div>
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-3 ">Frequently Asked Questions</h1>
+            <p class="lead">Got A Question ?<br> Get Your Answer</p>
+          </div>
+        </div>
+      </div>
+
+
+
+    <div class="container">
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  <i class="fa-solid fa-comment-medical"></i>&#160;What are 5 interesting facts about diabetes?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  The 5 Most Surprising Facts About Diabetes <br>
+                  &#45; Diabetes is a Leading Cause of Blindness Worldwide. <br>
+                  &#45; Adults with Diabetes Are Twice as Likely to Die from Heart Disease or Stroke. <br>
+                  &#45; Many Early Symptoms of Diabetes Are Too Mild to Notice. <br>
+                  &#45; Half of All Those with Diabetes Are Undiagnosed. <br>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <i class="fa-solid fa-comment-medical"></i>&#160;Is diabetes genetic?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  If you have a mother, father, sister, or brother with diabetes, you are more likely to get diabetes yourself. You are also more likely to have prediabetes. Talk to your doctor about your family health history of diabetes.
+                </div>
+              </div>
+            </div>
+            
+            <!--Start Question-->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <i class="fa-solid fa-comment-medical"></i>&#160;What are the 4 pillars of diabetes? (N.A.M.E)
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    N: Nutrition. Food is essential, cultural, spiritual and emotional. <br>
+                    A: Activity. Activity is NOT about weight loss; activity IS about lowering blood glucose, improving mental wellness, lowering blood <br> &#160;&#160;&#160;&#160;pressure and diabetes complications, and greater quality of life. <br>
+                    M: Medications. Medications are a part of diabetes care and management. <br>
+                    E: Emotions. Depression and anxiety are common among people living with diabetes. Depression increases the risk for diabetes.
+                  </div>
+                </div>
+              </div>
+            <!--End Question-->
+
+            <!--Start Question-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  <i class="fa-solid fa-comment-medical"></i>&#160;Why is it called diabetic?
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Diabetes mellitus is derived from the Greek word diabetes meaning siphon - to pass through and the Latin word mellitus meaning honeyed or sweet
+                </div>
+              </div>
+            </div>
+          <!--End Question-->
+          
+            <!--Start Question-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  <i class="fa-solid fa-comment-medical"></i>&#160;What hormone regulates blood sugar?
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Glucagon and insulin are both important hormones that play essential roles in regulating your blood glucose (sugar). Both hormones come from your pancreas — alpha cells in your pancreas make and release glucagon, and beta cells in your pancreas make and release insulin.
+                </div>
+              </div>
+            </div>
+          <!--End Question-->
+
+            <!--Start Question-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  <i class="fa-solid fa-comment-medical"></i>&#160;Can you live a happy healthy life with diabetes?
+                </button>
+              </h2>
+              <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  It's possible to live a normal, fun and healthy life with diabetes and not allow it to dictate your routine. You just need to learn proper diabetes management to take control of your health. As you age, it's important to take steps to manage your diabetes over the long term to help avoid complications from arising.
+                </div>
+              </div>
+            </div>
+          <!--End Question-->
+
+            <!--Start Question-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSeven">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                  <i class="fa-solid fa-comment-medical"></i>&#160;What are some potential complications of diabetes?
+                </button>
+              </h2>
+              <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Complications of diabetes can include nerve damage, kidney disease, vision problems, heart disease, and stroke. Proper management of diabetes can help reduce the risk of these complications.
+                </div>
+              </div>
+            </div>
+          <!--End Question-->
+          
+
+            <!--Start Question-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingEight">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                  <i class="fa-solid fa-comment-medical"></i>&#160;What health problems does it cause?
+                </button>
+              </h2>
+              <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Many conditions caused by diabetes can be serious and even life threatening. <br>
+                  These include: <br>
+                  &#160;&#160;1&#41; Heart disease <br>
+                  &#160;&#160;2&#41; High blood pressure <br>
+                  &#160;&#160;3&#41; Stroke <br>
+                  &#160;&#160;4&#41; Kidney disease <br>
+                  &#160;&#160;5&#41; Eye damage <br>
+                  &#160;&#160;6&#41; Foot problems                  
+                </div>
+              </div>
+            </div>
+          <!--End Question-->
+
+            <!--Start Question-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingNine">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                  <i class="fa-solid fa-comment-medical"></i>&#160;How can diabetes be treated?
+                </button>
+              </h2>
+              <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Type 2 diabetes is often treated with diet, exercise, medication taken orally, or with direct infusions of insulin. Oral medications help the insulin the body produces be more effective in processing glucose. Insulin injected through a syringe or delivered by an insulin pump mimics the way the pancreas would naturally produce and distribute insulin.  
+                </div>
+              </div>
+            </div>
+          <!--End Question-->
+
+            <!--Start Question-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                  <i class="fa-solid fa-comment-medical"></i>&#160; What should my blood sugar be when I wake up &#40;fasting&#41; and before meals? <br>&#160;&#160;What about after?
+                </button>
+              </h2>
+              <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  For most people with diabetes, recommended a fasting or before&#45;meals blood glucose &#40;or blood sugar&#41; goal of 70&#45;130 mg/dl. One to two hours after eating, a postprandial blood sugar reading at or under 180 mg/dl is recommended.
+                </div>
+              </div>
+            </div>
+          <!--End Question-->
+          
+
+            <!--Start Question1-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingEleven">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                  <i class="fa-solid fa-comment-medical"></i>&#160;Do I need to follow a low carb diet?
+                </button>
+              </h2>
+              <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Carbohydrates are an important part of a healthy diet. With diabetes, watching portion sizes and getting most of your carbs from fruits, vegetables, whole grains and low-fat milk and yogurt is key. Besides counting carbs, people with diabetes can also benefit from eating lower fat, high fiber foods and just enough calories to maintain a healthy weight.
+                </div>
+              </div>
+            </div>
+          <!--End Question-->
+
+            <!--Start Question2-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwelve">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                  <i class="fa-solid fa-comment-medical"></i>&#160;If it is sugar free, I can eat as much as I want, right?
+                </button>
+              </h2>
+              <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Sugar free foods can be part of a healthy meal plan in small amounts. Keep in mind though that some of these foods still have carbs (in the form of other sweeteners such as sorbitol, isomalt, and mannitol) and may affect your blood glucose levels. Many sugar free foods have calories and carbohydrates and lots of fat. Make sure you read the nutrition labels.
+                </div>
+              </div>
+            </div>
+          <!--End Question-->
+
+            <!--Start Question3-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThirteen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                  <i class="fa-solid fa-comment-medical"></i>&#160;Why does it matter if my blood sugar is 120 or 200?
+                </button>
+              </h2>
+              <div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  It is very important to keep your blood sugar level under control. When your blood sugar level is high, it can cause damage in your veins and arteries. This damage could lead to complications later such as heart attacks, strokes, kidney disease, neuropathies, vision problems, etc.
+                </div>
+              </div>
+            </div>
+          <!--End Question-->
+
+            <!--Start Question4-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFourteen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+                  <i class="fa-solid fa-comment-medical"></i>&#160;What foods have carbohydrates?
+                </button>
+              </h2>
+              <div id="collapseFourteen" class="accordion-collapse collapse" aria-labelledby="headingFourteen" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Fruits, starchy vegetables, milk, yogurt, rice, cereals, bread and other grains all have carbs and give you important nutrients. Many snack foods, such as pretzels, chips and popcorn, have carbs. Sweets, including regular soda, cakes, candy and cookies, also contain carbohydrates. Be sure to check the nutrition label on each food item to determine carbohydrate content.
+                </div>
+              </div>
+            </div>
+          <!--End Question-->
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          </div>
+
+    </div>
+
+
+       <!-- footer section -->
+       <footer class="footer_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4  footer_col">
+                    <div class="footer_contact">
+                        <h4>
+                            Reach at..
+                        </h4>
+                        <div class="contact_link_box">
+                            <a href="">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <span>
+                                    Call +01 1123455550
+                                </span>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <span>
+                                    cure@gmail.com
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer_social">
+                        <a href="">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4  footer_col">
+                    <div class="footer_detail">
+                        <h4>
+                            About
+                        </h4>
+                        <p>
+                            Our mission is to help individuals take control of their health by providing accurate
+                            information and the latest technology for early detection. We offer a range of features to
+                            support individuals with diabetes, including educational materials, health tracking tools,
+                            and access to a community of experts and fellow individuals with diabetes.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4  mx-auto footer_col">
+                    <div class="footer_link_box">
+                        <h4>
+                            Links
+                        </h4>
+                        <div class="footer_links">
+                            <a class="active" href="index.html#11">
+                                Home
+                            </a>
+                            <a class="" href="index.html#22">
+                                Services
+                            </a>
+                            <a class="" href="index.html#33">
+                                About
+                            </a>
+                            <a class="" href="index.html#44">
+                                Blog
+                            </a>
+                            <a class="" href="index.html#55">
+                                Contact Us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- footer section -->
+
+
+
+
+    <script src="{% static '/js/app.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>
