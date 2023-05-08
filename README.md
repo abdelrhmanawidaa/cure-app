@@ -37,14 +37,14 @@ We welcome contributions to Cure. If you would like to contribute, please feel f
 # Acknowledgements
 We would like to thank the following team mates for their contributions to this project:
 
-**Abdelrhman Adel**
-**Sohild Khalid**
-**Esraa Abdallah**
-**Shady Mohammed**
-**Salma Ashraf**
-**Abdelrhman Kamal**
-**Meran Ehab**
-**Seif Eleslam**
+**Abdelrhman Adel** -
+**Sohild Khalid** -
+**Esraa Abdallah** -
+**Shady Mohammed** -
+**Salma Ashraf** -
+**Abdelrhman Kamal** -
+**Meran Ehab** -
+**Seif Eleslam** -
 
 
 # License
