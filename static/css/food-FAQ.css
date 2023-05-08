@@ -1,4 +1,4 @@
-.sec-food-points{
+body{
   background-color: #eafdfc !important;
 }
 *{
@@ -137,9 +137,9 @@ li{
   .nav-item a{
     background: none !important;
   }
-  .nav-link{
+  /*.nav-link{
       color: white !important;
-  }
+  }*/
   
   .nav-item:hover a{
       color: #fff600 !important;
