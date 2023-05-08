@@ -38,9 +38,15 @@ To deploy your application to production, you can use Terraform to create the ne
 3. Navigate to the **terraform** directory.
 4. edit **image** with your docker image in ecs task.
 5. Run **terraform init** to initialize the Terraform environment.
-6. Run **terraform apply** to create the infrastructure resources on AWS. This will create a VPC, two subnets, two ECS Fargate tasks, and an Application Load Balancer. It will also pull the latest image from your Docker Hub repository and deploy it to the Fargate tasks.
-7. Once the infrastructure resources are created, you can view your application by going to the URL of the Application Load Balancer. You can find this URL in the Terraform output. The output should look something like this: load_balancer_url = "http://my-load-balancer-1234567890.us-west-2.elb.amazonaws.com"
+6. Run **terraform apply** to create the infrastructure resources on AWS. This will create a VPC, two subnets, two ECS Fargate tasks, and an Application Load Balancer.
+It will also pull the latest image from your Docker Hub repository and deploy it to the Fargate tasks.
+7. Once the infrastructure resources are created, you can view your application by going to the URL of the Application Load Balancer.
+You can find this URL in the Terraform output.
+The output should look something like this: load_balancer_url = "http://my-load-balancer-1234567890.us-west-2.elb.amazonaws.com"
+
 Note: Don't forget to destroy the Terraform resources when you're done testing to avoid incurring unnecessary costs. You can do this by running **terraform destroy**.
+
+
 ![GRADUATION](https://user-images.githubusercontent.com/108242922/236883926-4cfd82a9-be1b-4f40-81f8-89c56e3c84fb.png)
 
 
