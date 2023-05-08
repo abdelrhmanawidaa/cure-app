@@ -21,7 +21,7 @@ Cure was built using the following technologies:
 To install Cure, follow these steps:
 
 1. Clone the repository to your local machine.
-2. Install the required dependencies using **pip by running pip install -r requirements.txt** in your command line.
+2. Install the required dependencies using pip by running **pip install -r requirements.txt** in your command line.
 3. Run the database migrations by running **python manage.py makemigrations** followed by **python manage.py migrate**.
 4. Start the development server by running **python manage.py runserver 0.0.0.0:8000**.
 5. You can also run the Docker container by running **docker build -t app .** followed by **docker run -d -p 8000:8000 app**.
