@@ -166,10 +166,10 @@ def signup(request):
         User = get_user_model()
         if User.objects.filter(username=username).exists():
             messages.error(request, 'Username already exists.')
-            return render(request, 'sign-up.html')
+            return render(request, 'sign-up.html', {'error_message': 'Username already exists.'})
         elif User.objects.filter(email=email).exists():
-            messages.error(request, 'Email already exists.')
-            return render(request, 'sign-up.html')
+                messages.error(request, 'Email already exists.')
+                return render(request, 'sign-up.html', {'error_message': 'Email already exists.'})
         else:
             user = User.objects.create_user(username=username, email=email, password=password)
             user.save()
