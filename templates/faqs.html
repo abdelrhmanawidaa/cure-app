@@ -48,8 +48,11 @@
               </ul>
               <a href="../Arabic/retin-scan-fe.html" class="arabic-btn">العربية</a>
               <div class="sign-btn-div">
-                  <a class="sign-btn  btn-sm rounded-pill " href="{% url 'signin' %}">Sign In</a>
-              </div>
+                {% if request.user.is_authenticated %}
+                <a class="sign-btn  btn-sm rounded-pill " href="{% url 'logout' %}">Log out</a>
+                {% else %}
+                <a class="sign-btn  btn-sm rounded-pill " href="{% url 'signin' %}">Sign In</a>
+                {% endif %}              </div>
   
           </div>
       </div>

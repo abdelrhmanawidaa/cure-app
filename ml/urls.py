@@ -15,4 +15,5 @@ path('food-points/', views.foodpoints, name='foodpoints'),
 path('sign-up/', views.signup, name='signup'),
 path('sign-in/', views.signin, name='signin'),
 path('chatbot/', views.chatbot, name='chatbot'),
+path('logout/', views.logoutuser, name='logout'),
 ]

@@ -47,7 +47,11 @@
                 </ul>
                 <a href="../Arabic/early-diagnosis.html" class="arabic-btn">العربية</a>
                 <div class="sign-btn-div">
+                    {% if request.user.is_authenticated %}
+                    <a class="sign-btn  btn-sm rounded-pill " href="{% url 'logout' %}">Log out</a>
+                    {% else %}
                     <a class="sign-btn  btn-sm rounded-pill " href="{% url 'signin' %}">Sign In</a>
+                    {% endif %}
                 </div>
 
             </div>

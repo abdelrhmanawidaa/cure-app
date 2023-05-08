@@ -15,7 +15,7 @@ from django.contrib import messages
 from django.http import HttpResponse
 from django.shortcuts import render,redirect
 from django.contrib.auth.models import User 
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 
 
 
@@ -195,6 +195,11 @@ def signin(request):
     else:
         return render(request, 'sign-in.html')
     
+
+# the logout function
+def logoutuser(request):
+    logout(request)
+    return redirect('/')
 
 def faqs(request):
     return render(request,'faqs.html')
