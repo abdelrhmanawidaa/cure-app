@@ -7,10 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cure</title>
-    <link rel="icon" type="image/x-icon" href="{% static 'img/for v.png' %}">
-    <link href="{% static 'arabic/css/all.css' %}" rel="stylesheet" />
-    <link href="{% static 'arabic/css/bootstrap.min.css' %}" rel="stylesheet" />
-    <link rel="stylesheet" href="{% static 'arabic/css/style.css' %}">
+    <link rel="icon" type="image/x-icon" href="img/for v.png">
+    <link href="{% static 'css/all.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,6 +29,7 @@
         href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@600&family=Nunito:ital,wght@0,500;1,400&family=Poppins:wght@200;700&display=swap"
         rel="stylesheet">
 </head>
+
 
 <body>
     <section class="sec1" id="11">
@@ -353,7 +354,7 @@
 
         <div>
             <div class="bg-holder bg-size"
-                style="background-image:url(assets/img/gallery/dot-bg.png);background-position:top left;background-size:auto;">
+                style="background-image:url('../static/img/gallery/dot-bg.png');background-position:top left;background-size:auto;">
             </div>
             <!--/.bg-holder-->
 
@@ -584,7 +585,9 @@
 
 
 
-
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger intent="WELCOME" chat-title="Diabetes-Assistant" agent-id="4772beef-ae03-48eb-898f-a3fc70d67f58"
+        language-code="en" chat-icon="https://cdn-icons-png.flaticon.com/512/4807/4807695.png"></df-messenger>
 
 
 
@@ -593,14 +596,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
-    <script src="{% static 'arabic/js/jquery-3.6.1.min.js' %}"></script>
-    <script src="{% static 'arabic/js/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static 'arabic/js/main.js' %}"></script>
+    <script src="{% static 'js/jquery-3.6.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 
 </body>
 
 </html>
-
-<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-<df-messenger intent="WELCOME" chat-title="Diabetes-Assistant" agent-id="4772beef-ae03-48eb-898f-a3fc70d67f58"
-    language-code="en" chat-icon="https://cdn-icons-png.flaticon.com/512/4807/4807695.png"></df-messenger>
