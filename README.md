@@ -58,7 +58,7 @@ We welcome contributions to Cure. If you would like to contribute, please feel f
 We would like to thank the following team mates for their contributions to this project:
 
 **Abdelrhman Adel** -
-**Sohild Khalid** -
+**Sohila Khaled** -
 **Esraa Abdallah** -
 **Shady Mohammed** -
 **Salma Ashraf** -
