@@ -27,6 +27,6 @@ path ('steps-ar/', views.stepsar, name='steps-ar'),
 path('food-point-ar/', views.foodpointsar, name='foodpoints-ar'),
 path('sign-up-ar/', views.signupar, name='signup-ar'),
 path('sign-in-ar/', views.signinar, name='signin-ar'),
-path('chatbot-ar/', views.chatbot, name='chatbot-ar'),
+path('chatbot-ar/', views.chatbotar, name='chatbot-ar'),
 path('logout-ar/', views.logoutuserar, name='logout-ar'),
 ]
