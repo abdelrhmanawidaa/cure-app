@@ -60,7 +60,7 @@
                         <a class="nav-link " href="{% url 'index' %}#55">CONTACT US</a>
                     </li>
                 </ul>
-                <a href="../Arabic/retin-scan-fe.html" class="arabic-btn">العربية</a>
+                <a href="{% url 'scan-ar' %}" class="arabic-btn">العربية</a>
                 <div class="sign-btn-div">
                     {% if request.user.is_authenticated %}
                     <a class="sign-btn  btn-sm rounded-pill " href="{% url 'logout' %}">Log out</a>
@@ -80,7 +80,8 @@
         <p class="title-s"> Upload jpg or png Format.</p>
     </div>
     <div class=" explin-retin text-center">
-        <p class="titles-retin"> Please upload your retina scan and you’ll get your results.
+        <p class="titles-retin"> Please upload retina scan and you will get your results
+            Within seconds of uploading your scan, you are done.
         </p>
     </div>
     <section class="sec-retin">

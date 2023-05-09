@@ -45,7 +45,7 @@
                         <a class="nav-link " href="{% url 'index' %}#55">CONTACT US</a>
                     </li>
                 </ul>
-                <a href="../Arabic/early-diagnosis.html" class="arabic-btn">العربية</a>
+                <a href="{% url 'earlydiagnosis-ar' %}" class="arabic-btn">العربية</a>
                 <div class="sign-btn-div">
                     {% if request.user.is_authenticated %}
                     <a class="sign-btn  btn-sm rounded-pill " href="{% url 'logout' %}">Log out</a>
@@ -71,7 +71,7 @@
         </div> -->
         <div class="container box-cont">
             <div class="text-center main-p">
-                <h2 class="title-1">Answers the following Questions</h2>
+                <h2 class="title-1">Answer the following Questions</h2>
             </div>
             <form method= "POST" action="{% url 'early-result' %}" >
                 {% csrf_token %}

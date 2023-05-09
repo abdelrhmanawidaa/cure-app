@@ -47,7 +47,7 @@
                         <a class="nav-link " href="{% url 'index' %}#55">CONTACT US</a>
                     </li>
                 </ul>
-                <a href="../Arabic/index.html" class="arabic-btn">العربية</a>
+                <a href="{% url 'steps-ar' %}" class="arabic-btn">العربية</a>
                 <div class="sign-btn-div">
                     {% if request.user.is_authenticated %}
                     <a class="sign-btn  btn-sm rounded-pill " href="{% url 'logout' %}">Log out</a>
@@ -71,7 +71,7 @@
                 <p class="step-line">3- Check your feet every day for cuts, blisters, red spots, and swelling.</p>
                 <p class="step-line">4- Brush your teeth and floss every day to keep your mouth, teeth, and gums healthy.
                 </p>
-                <p class="step-line">5- Stop smoking.</p>
+                <p class="step-line">5- stop smoking and if you are a non-smoker, continue</p>
                 <p class="step-line">6- Keep track of your blood sugar</p>
                 <p class="step-line">7- Go weigh and diet </p>
                 <p class="step-line">9- do exercise, walking</p>

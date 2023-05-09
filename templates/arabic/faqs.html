@@ -1,0 +1,469 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FAQS</title>
+  <link href="{% static 'arabic/css/food-FAQ.css' %}" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa&family=Open+Sans:wght@300&family=PT+Sans:ital,wght@0,700;1,700&display=swap"
+    rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/a7e29101f9.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <!-- sec-nav -->
+  <nav class="navbar navbar-expand-lg  fadeIn nav-sec " data-wow-delay="0.1s">
+    <div class="container-fluid">
+      <div class="logo-div ">
+        <a href="{% url 'index-ar' %}">
+          <img class="navbar-brand logo " src="{% static 'img/colorful logo.png' %}" href="#"></img>
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto nav-ul  ">
+          <li class="nav-item home-word ">
+            <a class="nav-link active " aria-current="page" href="{% url 'index-ar' %}">الرئسيه </a>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'index-ar' %}#22">خدمات</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'index-ar' %}#33">من نحن</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="{% url 'index-ar' %}#44">مقالات</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="{% url 'index-ar' %}#55">تواصل معنا</a>
+          </li>
+        </ul>
+        <a href="{% url 'faqs' %}" class="arabic-btn">English</a>
+        <div class="sign-btn-div">
+          {% if request.user.is_authenticated %}
+          <a class="sign-btn  btn-sm rounded-pill " href="{% url 'logout-ar' %}">تسجيل الخروج</a>
+          {% else %}
+          <a class="sign-btn  btn-sm rounded-pill " href="{% url 'signin-ar' %}">تسجيل الدخول</a>
+          {% endif %}
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="sec-faqs">
+    <div class="container col-xxl-8 px-4 py-5 sec-faqs">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img src="{% static 'images/faqs.png' %}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700"
+            height="500" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold lh-1 mb-3 ">الأسئلة المتداولة والأجوبة</h1>
+          <p class="lead">هل لديك سؤال؟ <br> احصل على إجابتك</p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container">
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              <i class="fa-solid fa-comment-medical"></i>&#160;ما هي 5 حقائق مثيرة للاهتمام حول مرض السكري؟
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              5 حقائق مدهشة عن مرض السكري <br>
+              &#45; ؛ مرض السكري هو السبب الرئيسي للعمى في جميع أنحاء العالم. <br>
+              &#45; ؛ من المرجح أن يموت البالغون المصابون بالسكري من أمراض القلب أو السكتة الدماغية. <br>
+              &#45; ؛ العديد من الأعراض المبكرة لمرض السكري خفيفة للغاية بحيث لا يمكن ملاحظتها. <br>
+              &#45; ؛ نصف المصابين بالسكري لم يتم تشخيصهم. <br>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <i class="fa-solid fa-comment-medical"></i>&#160;هل مرض السكري وراثي؟
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              إذا كان لديك أم أو أب أو أخت أو أخ مصاب بمرض السكري ، فمن المرجح أن تصاب بمرض السكري بنفسك. <br> أنت أيضًا
+              أكثر
+              عرضة للإصابة بمقدمات السكري. تحدث إلى طبيبك حول تاريخ عائلتك الصحي لمرض السكري.
+            </div>
+          </div>
+        </div>
+
+        <!--Start Question-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <i class="fa-solid fa-comment-medical"></i>&#160;ما هي الركائز الأربع لمرض السكري؟ (N.A.M.E)
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              N: تَغذِيَة. الغذاء أساسي وثقافي وروحي وعاطفي. <br>
+              A: نشاط. لا يتعلق النشاط بفقدان الوزن ؛ يتعلق النشاط بخفض نسبة الجلوكوز في الدم ، وتحسين الصحة العقلية
+              <br> &#160;&#160;&#160;&#160;وخفض ضغط الدم ومضاعفات مرض السكري ، وتحسين نوعية الحياة. <br>
+              M: الأدوية. الأدوية هي جزء من رعاية مرض السكري وإدارته.<br>
+              E: العواطف. الاكتئاب والقلق شائعان بين الأشخاص المصابين بداء السكري. يزيد الاكتئاب من خطر الإصابة بمرض
+              السكري.
+            </div>
+          </div>
+        </div>
+        <!--End Question-->
+
+        <!--Start Question-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              <i class="fa-solid fa-comment-medical"></i>&#160;لماذا يسمى السكري؟
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              داء السكري مشتق من الكلمة اليونانية داء السكري وتعني السيفون - بالمرور والكلمة اللاتينية ميليتوس تعني
+              العسل أو الحلو
+            </div>
+          </div>
+        </div>
+        <!--End Question-->
+
+        <!--Start Question-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              <i class="fa-solid fa-comment-medical"></i>&#160;ما الهرمون الذي ينظم سكر الدم؟
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              الجلوكاجون والأنسولين كلاهما هرمونات مهمة تلعب دورًا أساسيًا في تنظيم جلوكوز الدم (السكر). <br> يأتي كلا
+              الهرمونين من البنكرياس - خلايا ألفا في البنكرياس تصنع وتطلق الجلوكاجون ، وخلايا بيتا في البنكرياس تصنع
+              الأنسولين وتطلقه.
+            </div>
+          </div>
+        </div>
+        <!--End Question-->
+
+        <!--Start Question-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingSix">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+              <i class="fa-solid fa-comment-medical"></i>&#160;هل يمكنك أن تعيش حياة صحية سعيدة مع مرض السكري؟
+            </button>
+          </h2>
+          <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              من الممكن أن تعيش حياة طبيعية وممتعة وصحية مع مرض السكري وعدم السماح له بإملاء روتينك. تحتاج فقط إلى تعلم
+              الإدارة السليمة لمرض السكري للسيطرة على صحتك. مع تقدمك في العمر ، من المهم اتخاذ خطوات لإدارة مرض السكري
+              لديك على المدى الطويل للمساعدة في تجنب حدوث مضاعفات.
+            </div>
+          </div>
+        </div>
+        <!--End Question-->
+
+        <!--Start Question-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingSeven">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+              <i class="fa-solid fa-comment-medical"></i>&#160;ما هي بعض المضاعفات المحتملة لمرض السكري؟
+            </button>
+          </h2>
+          <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              يمكن أن تشمل مضاعفات مرض السكري تلف الأعصاب وأمراض الكلى ومشاكل الرؤية وأمراض القلب و
+              سكتة دماغية. يمكن أن تساعد الإدارة السليمة لمرض السكري في تقليل مخاطر هذه المضاعفات.
+            </div>
+          </div>
+        </div>
+        <!--End Question-->
+
+
+        <!--Start Question-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingEight">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+              <i class="fa-solid fa-comment-medical"></i>&#160;ما هي المشاكل الصحية التي تسببها؟
+            </button>
+          </h2>
+          <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              يمكن أن تكون العديد من الحالات التي يسببها مرض السكري خطيرة وحتى مهددة للحياة. <br>
+              وتشمل هذه: <br>
+              &#160;&#160;1&#41;مرض قلبي<br>
+              &#160;&#160;2&#41; ضغط دم مرتفع <br>
+              &#160;&#160;3&#41; سكتة دماغية <br>
+              &#160;&#160;4&#41; مرض كلوي <br>
+              &#160;&#160;5&#41; تلف العين<br>
+              &#160;&#160;6&#41; مشاكل القدم
+            </div>
+          </div>
+        </div>
+        <!--End Question-->
+
+        <!--Start Question-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingNine">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+              <i class="fa-solid fa-comment-medical"></i>&#160;كيف يمكن علاج مرض السكري؟
+            </button>
+          </h2>
+          <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              غالبًا ما يُعالج مرض السكري من النوع 2 باتباع نظام غذائي أو ممارسة الرياضة أو تناول الأدوية عن طريق الفم
+              أو عن طريق الحقن المباشر من الأنسولين. تساعد الأدوية التي تؤخذ عن طريق الفم الأنسولين الذي ينتجه الجسم على
+              أن يكون أكثر فعالية في معالجة الجلوكوز. الأنسولين الذي يتم حقنه من خلال حقنة أو بواسطة مضخة الأنسولين
+              يحاكي الطريقة التي ينتج بها البنكرياس الأنسولين بشكل طبيعي ويوزعه.
+            </div>
+          </div>
+        </div>
+        <!--End Question-->
+
+        <!--Start Question-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTen">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+              <i class="fa-solid fa-comment-medical"></i>&#160;ماذا يجب أن يكون سكر الدم عند الاستيقاظ
+              &#40;صائماً&#41; وقبل الوجبات؟ <br>&#160;&#160;ماذا بعد؟
+            </button>
+          </h2>
+          <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              بالنسبة لمعظم مرضى السكري ، يوصى بالصيام أو قبله ؛ وجبات جلوكوز الدم &#40;او سكر الدم&#41; الهدف
+              70&#45;المستهدف 130 مجم / ديسيلتر. بعد ساعة إلى ساعتين من تناول الطعام ، تظهر قراءة سكر الدم <br>بعد الأكل
+              عند
+              أو أقل من 180 مجم / ديسيلتر.
+            </div>
+          </div>
+        </div>
+        <!--End Question-->
+
+
+        <!--Start Question1-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingEleven">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+              <i class="fa-solid fa-comment-medical"></i>&#160;هل أحتاج إلى اتباع نظام غذائي منخفض الكربوهيدرات؟
+            </button>
+          </h2>
+          <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              تعتبر الكربوهيدرات جزءًا مهمًا من النظام الغذائي الصحي. مع مرض السكري ، مشاهدة أحجام الحصص والحصول عليها
+              معظم الكربوهيدرات من الفواكه والخضروات والحبوب الكاملة والحليب قليل الدسم واللبن هو المفتاح. بجانب
+              عند احتساب الكربوهيدرات ، يمكن للأشخاص المصابين بداء السكري أيضًا الاستفادة من تناول الأطعمة منخفضة الدهون والألياف والأطعمة فقط
+              السعرات الحرارية الكافية للحفاظ على وزن صحي.
+            </div>
+          </div>
+        </div>
+        <!--End Question-->
+
+        <!--Start Question2-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwelve">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+              <i class="fa-solid fa-comment-medical"></i>&#160;إذا كانت خالية من السكر ، يمكنني أن آكل بقدر ما أريد ،
+              أليس كذلك؟
+            </button>
+          </h2>
+          <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              يمكن أن تكون الأطعمة الخالية من السكر جزءًا من خطة وجبات صحية بكميات صغيرة. ضع في اعتبارك على الرغم من أن
+              بعض
+              هذه الأطعمة لا تزال تحتوي على الكربوهيدرات (في شكل محليات أخرى مثل السوربيتول والإيزومالت والمانيتول) و
+              قد تؤثر على مستويات الجلوكوز في الدم. تحتوي العديد من الأطعمة الخالية من السكر على سعرات حرارية
+              وكربوهيدرات والكثير من
+              سمين. تأكد من قراءة ملصقات التغذية.
+            </div>
+          </div>
+        </div>
+        <!--End Question-->
+
+        <!--Start Question3-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThirteen">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+              <i class="fa-solid fa-comment-medical"></i>&#160;لماذا يهم إذا كان السكر في دمي 120 أو 200؟
+            </button>
+          </h2>
+          <div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              من المهم جدًا الحفاظ على مستوى السكر في الدم تحت السيطرة. عندما يرتفع مستوى السكر في الدم ، يمكن أن يتسبب
+              ذلك في تلف الأوردة والشرايين. قد يؤدي هذا الضرر إلى مضاعفات لاحقًا مثل النوبات القلبية والسكتات الدماغية
+              وأمراض الكلى واعتلال الأعصاب ومشاكل الرؤية وما إلى ذلك.
+            </div>
+          </div>
+        </div>
+        <!--End Question-->
+
+        <!--Start Question4-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFourteen">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+              <i class="fa-solid fa-comment-medical"></i>&#160;ما هي الأطعمة التي تحتوي على الكربوهيدرات؟
+            </button>
+          </h2>
+          <div id="collapseFourteen" class="accordion-collapse collapse" aria-labelledby="headingFourteen"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              الفواكه والخضروات النشوية والحليب والزبادي والأرز والحبوب والخبز والحبوب الأخرى كلها تحتوي على الكربوهيدرات وتعطي
+              أنت من العناصر الغذائية الهامة. تحتوي العديد من الأطعمة الخفيفة ، مثل البسكويت المملح ورقائق البطاطس والفشار على الكربوهيدرات. حلويات ،
+              بما في ذلك الصودا العادية والكعك والحلوى والبسكويت ، وتحتوي أيضًا على الكربوهيدرات. تأكد من التحقق من
+              ملصق التغذية على كل عنصر غذائي لتحديد محتوى الكربوهيدرات.
+            </div>
+          </div>
+        </div>
+        <!--End Question-->
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4  footer_col">
+          <div class="footer_contact">
+            <h4>
+              تصل إلى ..
+            </h4>
+            <div class="contact_link_box">
+
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Call +01 1123455550
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  cure@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="footer_social">
+            <a href="">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4  footer_col">
+          <div class="footer_detail">
+            <h4>
+              من نحن
+            </h4>
+            <p>
+              مهمتنا هي مساعدة الأفراد على السيطرة على صحتهم من خلال توفير معلومات دقيقة وأحدث التقنيات
+              للكشف المبكر. نحن نقدم مجموعة من الميزات لدعم الأفراد المصابين بمرض السكري ، بما في ذلك
+              المواد التعليمية وأدوات تتبع الصحة والوصول إلى مجتمع من الخبراء والأفراد المصابين بداء
+              السكري. نشكرك على زيارة موقعنا ، ونأمل أن تجد الموارد هنا مفيدة.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4  mx-auto footer_col">
+          <div class="footer_link_box">
+            <h4>
+              الروابط
+            </h4>
+            <div class="footer_links">
+              <a class="active" href="{% url 'index-ar' %}#11">
+                الرئسيه
+              </a>
+              <a class="" href="{% url 'index-ar' %}#22">
+                خدمات
+              </a>
+              <a class="" href="{% url 'index-ar' %}#33">
+                من نحن
+              </a>
+              <a class="" href="{% url 'index-ar' %}#44">
+                مقالات
+              </a>
+              <a class="" href="{% url 'index-ar' %}#55">
+                تواصل معنا
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+
+
+
+  <script src="{% static 'arabic/js/app.js' %}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'arabic/css/all.css' %}" rel="stylesheet" />
+    <link href="{% static 'arabic/css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'arabic/css/sign-in-up.css' %}" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="{% static 'img/for v.png' %}">
+    <title>cure</title>
+</head>
+
+<body>
+    <div>
+        <div class="sec1">
+            <div class="row ">
+                <div class="col-md-8 left-side text-center">
+                    <form action="{% url 'signin-ar' %}" form method="post">
+                        {% csrf_token %}
+                        <div>
+                            <p class="p1-1">تسجيل الدخول إلى حسابك</p>
+                        </div>
+                        <div class="inputs text-center">
+                            <input class="email in1" name="username" type="text" placeholder="   Username" required>
+                            <br>
+                            <input class="password in1" name="password" type="password" placeholder="   Password"
+                                required>
+                            {% if error %}
+                            <p>{{ error }}</p>
+                            {% endif %}
+                        </div>
+                        <div class="btn-signin">
+                            <input class="sub-button btn btn-dark" type="submit" value="SIGN IN">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-4 signup-sec text-center">
+                    <div>
+                        <div class="titles-right">
+                            <h1>هل أنت جديد هنا؟</h1>
+                            <p>اشترك واكتشف قدرًا كبيرًا من المعلومات حول مرض السكري! </p>
+                            <div class="btn-signup">
+                                <a class="sub2-button btn btn-dark" href="{% url 'signup-ar' %}" id="signUp">اشترك الآن</a>
+                                <!-- <input class="sub2-button btn btn-dark"   type="button" value="sign up"> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

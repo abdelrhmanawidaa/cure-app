@@ -212,3 +212,193 @@ def steps(request):
 
 def chatbot(request):
     return render(request,'chatbot.html')
+
+
+
+
+
+
+
+
+# arabic views
+
+@login_required(login_url='signin-ar')
+def scanar(request):
+    message = ""
+    prediction = ""
+    fss = CustomFileSystemStorage()
+    try:
+        image = request.FILES["image"]
+        print("Name", image.file)
+        _image = fss.save(image.name, image)
+        path = str(settings.MEDIA_ROOT) + "/" + image.name
+        # image details
+        image_url = fss.url(_image)
+        # Read the image
+        imag=cv2.imread(path)
+        imag1 = cv2.resize(imag,(300,300))
+        X = np.array((imag1[np.newaxis])/255)
+
+        # load model
+        model = tf.keras.models.load_model(os.getcwd() + '/dumbs/densenet_bestqwk.h5')
+        score_predict=((model.predict(X).ravel()*model.predict(X[:, ::-1, :, :]).ravel()*model.predict(X[:, ::-1, ::-1, :]).ravel()*model.predict(X[:, :, ::-1, :]).ravel())**0.25).tolist()
+        label_predict = np.argmax(score_predict)
+
+        # ----------------
+        # LABELS
+        # 0 - No diabetic retinopathy
+        # 1 - Mild
+        # 2 - Moderate
+        # 3 - Severe
+        # 4 - Proliferative diabetic retinopathy
+        # ----------------
+
+        
+        prediction = label_predict
+        print("improtant::  "+str(label_predict))
+        if (prediction == 0):
+            prediction = "ليس لديك اعتلال الشبكية السكري"
+            message = "نحن سعداء جدا من أجلك"
+        elif (prediction == 1):
+            prediction = "اعتلال الشبكية السكري خفيف"
+            message = "نحن آسفون من أجلك"
+        elif (prediction == 2):
+             prediction = "اعتلال الشبكية السكري لديك متوسط"
+             message = "نحن آسفون من أجلك"
+        elif (prediction == 3):
+             prediction = "اعتلال الشبكية السكري لديك شديد"
+             message = "نحن آسفون من أجلك"
+        elif (prediction == 4):
+             prediction = "اعتلال الشبكية السكري الخاص بك منتشر بكثرة"
+             message = "نحن آسفون من أجلك"
+        else:
+             prediction = "حدث خطأ ما"
+        
+         
+        
+        return TemplateResponse(
+            request,
+            "arabic/result-retin.html",
+            {
+                "message": message,
+                "image": image,
+                "image_url": image_url,
+                "prediction": prediction,
+            },
+        )
+    except MultiValueDictKeyError:
+
+        return TemplateResponse(
+            request,
+            "arabic/retin-scan-fe.html",
+            {"message": "لم يتم تحديد صورة"},
+        )
+
+def homear(request):
+    return render(request,'arabic/index.html')
+
+@login_required(login_url='signin-ar')
+def earlydiagnosisar(request):
+    return render(request,'arabic/early-diagnosis.html')
+    
+
+    """ This code does the following:
+1. Takes the input from the form
+2. Passes the input to the model
+3. Renders the result and a message """
+
+def resultar(request):
+        if request.method == 'POST':
+            quantity = float(request.POST['quantity'])
+            cho0 = int(request.POST['cho0'])
+            cho = int(request.POST['cho'])
+            cho1 = int(request.POST['cho1'])
+            cho2 = int(request.POST['cho2'])
+            cho3 = int(request.POST['cho3'])
+            cho4 = int(request.POST['cho4'])
+            cho5 = int(request.POST['cho5'])
+            cho6 = int(request.POST['cho6'])
+            cho7 = int(request.POST['cho7'])
+            cho8 = int(request.POST['cho8'])
+            cho9 = int(request.POST['cho9'])
+            cho11 = int(request.POST['cho11'])
+            cho12 = int(request.POST['cho12'])
+            cho13 = int(request.POST['cho13'])
+            cho14 = int(request.POST['cho14'])
+        else:
+            return render(request, 'arabic/result-early-diagnosis.html', {'result':'هناك خطأ ما'})
+
+        #result = predictions.getPredictions(int(request.GET['quantity']),int(request.GET['cho0']),int(request.GET['cho']),int(request.GET['cho1']),int(request.GET['cho2']),int(request.GET['cho3']),int(request.GET['cho4']),int(request.GET['cho5']),int(request.GET['cho6']),int(request.GET['cho7']),int(request.GET['cho8']),int(request.GET['cho9']),int(request.GET['cho11']),int(request.GET['cho12']),int(request.GET['cho13']),int(request.GET['cho14']))
+        result = predictions.getPredictions(quantity,cho,cho0,cho1,cho2,cho3,cho4,cho5,cho6,cho7,cho8,cho9,cho11,cho12,cho13,cho14)
+        if (result == "You don't have diabetes"):
+            message = "يسعدنا إبلاغك بأن ليس لديك مرض السكري "
+        else:
+            message = "يحزننا إخبارك بأن لديك مرض السكري"
+        
+        #print(quantity,cho,cho0,cho1,cho2,cho3,cho4,cho5,cho6,cho7,cho8,cho9,cho11,cho12,cho13,cho14)
+        #print("result:::::",result)
+        return render(request, 'arabic/result-early-diagnosis.html', {'result':result,'message':message})
+
+
+
+
+
+
+
+# the sign up or registration function
+def signupar(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+
+        User = get_user_model()
+        if User.objects.filter(username=username).exists():
+            messages.error(request, 'Username already exists.')
+            return render(request, 'arabic/sign-up.html', {'error_message': 'اسم المستخدم موجود بالفعل'})
+        elif User.objects.filter(email=email).exists():
+                messages.error(request, 'Email already exists.')
+                return render(request, 'arabic/sign-up.html', {'error_message': 'البريد الالكتروني موجود بالفعل.'})
+        else:
+            user = User.objects.create_user(username=username, email=email, password=password)
+            user.save()
+            messages.success(request, 'Account created successfully.')
+            return redirect('signin-ar')
+    else:
+        return render(request, 'arabic/sign-up.html')
+
+# the login function
+def signinar(request):
+    if request.method == 'POST':
+        #login is done by entering username not email
+        username=request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            login(request, user)
+            return redirect('/ar')
+        else:
+            messages.error(request, 'Invalid username or password')
+            return render(request, 'arabic/sign-in.html', {'error': 'خطأ في اسم المستخدم أو كلمة مرور'})
+    else:
+        return render(request, 'arabic/sign-in.html')
+    
+
+# the logout function
+def logoutuserar(request):
+    logout(request)
+    return redirect('/ar')
+
+def faqsar(request):
+    return render(request,'arabic/faqs.html')
+
+def foodpointsar(request):
+    return render(request,'arabic/food-points.html')
+
+def stepsar(request):
+    return render(request,'arabic/steps.html')
+
+def chatbotar(request):
+    return render(request,'arabic/chatbot.html')
+

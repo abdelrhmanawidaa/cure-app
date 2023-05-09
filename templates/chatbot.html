@@ -61,7 +61,7 @@
                             <a class="nav-link " href="#55">CONTACT US</a>
                         </li>
                     </ul>
-                    <a href="../Arabic/index.html" class="arabic-btn">العربية</a>
+                    <a href="{% url 'index-ar' %}" class="arabic-btn">العربية</a>
                     {% if request.user.is_authenticated %}
                     <a class="sign-btn  btn-sm rounded-pill " href="{% url 'logout' %}">Log out</a>
                     {% else %}
