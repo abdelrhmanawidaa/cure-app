@@ -22,7 +22,7 @@ body{
 }
 
 .layer {
-  background-image: url("./images/final.png");
+  background-image: url("../images/final.png");
   background-size: cover;
   background-position: center;
   width: 100% !important;
