@@ -47,7 +47,7 @@ The output should look something like this: load_balancer_url = "http://my-load-
 Note: Don't forget to destroy the Terraform resources when you're done testing to avoid incurring unnecessary costs. You can do this by running **terraform destroy**.
 
 
-![GRADUATION](https://user-images.githubusercontent.com/108242922/236883926-4cfd82a9-be1b-4f40-81f8-89c56e3c84fb.png)
+![GRADUATION (1)](https://github.com/abdelrhmanawidaa/grad-proj/assets/108242922/5252fc8b-2670-455f-8317-9381e6a8e621)
 
 
 # Contributing
@@ -68,4 +68,12 @@ We would like to thank the following team mates for their contributions to this 
 
 
 # License
-This project is owned by our team and you shall not use it without permission.
+
+This project is licensed under the GNU General Public License (GPL) version 3.0. 
+
+The GPL is a copyleft license that ensures the freedom to use, modify, and distribute the software and any derived works. It requires that if you distribute copies of the software or modify it, you must make the corresponding source code available under the GPL as well. This license promotes the principles of open source software and aims to protect the rights of users and developers.
+
+For detailed information about the GPL license terms and conditions, please refer to the [LICENSE](./LICENSE) file.
+
+By using this project, you agree to comply with the terms and conditions of the GPL license.
+
