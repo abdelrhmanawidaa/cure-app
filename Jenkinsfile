@@ -15,7 +15,7 @@ pipeline {
         stage('Push') {
             steps {
                 script {
-                    docker.withRegistry('https://registry.hub.docker.com', 'docker-hub') {
+                    docker.withRegistry('https://index.docker.io/v1/', 'docker-hub') {
                         sh "docker push abdelrhmanawidaa/graduation-app:latest"
                     }
                 }
