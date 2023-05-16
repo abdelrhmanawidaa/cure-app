@@ -1,12 +1,5 @@
 pipeline {
     agent any
-
-    stages {
-        stage('Clone') {
-            steps {
-                git 'https://github.com/abdelrhmanawidaa/grad-proj'
-            }
-        }
         
         stage('Build') {
             steps {
