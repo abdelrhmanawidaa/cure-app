@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://registry.hub.docker.com', 'docker-hub') {
-                        dockerImage.push()
+                        sh "docker push abdelrhmanawidaa/graduation-app:latest"
                     }
                 }
             }
