@@ -3,4 +3,5 @@ k8s/
 README.md
 models-code/
 docker-compose.yml
+Jenkinsfile
 ```
