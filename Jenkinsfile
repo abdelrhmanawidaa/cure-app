@@ -13,7 +13,7 @@ pipeline {
         stage('Unit Test') {
             steps {
                 script {
-                    withDockerContainer(image: 'abdelrhmanawidaa/graduation-app:latest', args: '-v $(pwd):/app') {
+                    withDockerContainer(image: 'abdelrhmanawidaa/graduation-app:latest', args: "-v ${WORKSPACE}:/app") {
                         sh 'python manage.py test'
                     }
                 }
