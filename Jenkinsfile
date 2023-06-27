@@ -5,13 +5,18 @@ pipeline {
         stage('Unit Test') {
             steps {
                 script {
-                    def testImage = docker.build("abdelrhmanawidaa/graduation-app:latest")
-                    bat 'docker run -t -v %WORKSPACE%:/app abdelrhmanawidaa/graduation-app:latest python manage.py test'
-                }
+                    bat'pip install -r requirements.txt'
+                    bat'python manage.py test'
             }
         }
         
-
+        stage('Build') {
+            steps {
+                script {
+                    docker.build("abdelrhmanawidaa/graduation-app:latest")
+                }
+            }
+        }
         
         stage('Push') {
             steps {
