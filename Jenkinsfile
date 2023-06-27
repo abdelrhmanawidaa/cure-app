@@ -6,9 +6,7 @@ pipeline {
             steps {
                 script {
                     def testImage = docker.build("abdelrhmanawidaa/graduation-app:latest")
-                    testImage.inside {
-                        sh 'python manage.py test'
-                    }
+                    sh 'docker run -t -v $(pwd):/app abdelrhmanawidaa/graduation-app:latest python manage.py test'
                 }
             }
         }
