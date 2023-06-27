@@ -5,19 +5,15 @@ pipeline {
         stage('Unit Test') {
             steps {
                 script {
-                    docker.build("abdelrhmanawidaa/graduation-app:latest")
-                    sh 'docker run -t -v %cd%:/app abdelrhmanawidaa/graduation-app:latest python manage.py test'
+                    def testImage = docker.build("abdelrhmanawidaa/graduation-app:latest")
+                    testImage.inside {
+                        sh 'python manage.py test'
+                    }
                 }
             }
         }
         
-        stage('Build') {
-            steps {
-                script {
-                    docker.build("abdelrhmanawidaa/graduation-app:latest")
-                }
-            }
-        }
+
         
         stage('Push') {
             steps {
