@@ -5,8 +5,8 @@ pipeline {
         stage('Unit Test') {
             steps {
                 script {
-                    bat 'C:\\path\\to\\python\\Scripts\\pip install -r requirements.txt'
-                    bat 'C:\\path\\to\\python\\python manage.py test'
+                    bat 'C:\Python311\Scripts\pip install -r requirements.txt'
+                    bat 'C:\Python311\python manage.py test'
                 }
             }
         }
