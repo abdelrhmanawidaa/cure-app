@@ -2,19 +2,20 @@ pipeline {
     agent any
 
     stages {
-        stage('Unit Test') {
-            steps {
-                script {
-                    bat 'C:\\Python311\\Scripts\\pip install -r requirements.txt'
-                    bat 'C:\\Python311\\python manage.py test'
-                }
-            }
-        }
-
         stage('Build') {
             steps {
                 script {
                     def testImage = docker.build("abdelrhmanawidaa/graduation-app:latest")
+                }
+            }
+        }
+
+        stage('Unit Test') {
+            steps {
+                script {
+                    container('abdelrhmanawidaa/graduation-app:latest') {
+                        sh 'python manage.py test'
+                    }
                 }
             }
         }
