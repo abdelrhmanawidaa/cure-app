@@ -5,19 +5,20 @@ pipeline {
         stage('Unit Test') {
             steps {
                 script {
-                    bat'pip install -r requirements.txt'
-                    bat'python manage.py test'
-            }
-        }
-        
-        stage('Build') {
-            steps {
-                script {
-                    docker.build("abdelrhmanawidaa/graduation-app:latest")
+                    bat 'pip install -r requirements.txt'
+                    bat 'python manage.py test'
                 }
             }
         }
-        
+
+        stage('Build') {
+            steps {
+                script {
+                    def testImage = docker.build("abdelrhmanawidaa/graduation-app:latest")
+                }
+            }
+        }
+
         stage('Push') {
             steps {
                 script {
@@ -28,5 +29,4 @@ pipeline {
             }
         }
     }
-}
 }
