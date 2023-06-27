@@ -13,8 +13,8 @@ pipeline {
         stage('Unit Test') {
             steps {
                 script {
-                    docker.image('abdelrhmanawidaa/graduation-app:latest').inside {
-                        sh 'python ./manage.py test'
+                    testImage.inside {
+                        sh 'python manage.py test'
                     }
                 }
             }
