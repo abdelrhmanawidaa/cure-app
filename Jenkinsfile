@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    def testImage = docker.build("abdelrhmanawidaa/graduation-app:latest")
+                    def testImage1 = docker.build("abdelrhmanawidaa/graduation-app:latest")
                 }
             }
         }
@@ -13,7 +13,7 @@ pipeline {
         stage('Unit Test') {
             steps {
                 script {
-                    testImage.inside {
+                    testImage1.inside {
                         sh 'python manage.py test'
                     }
                 }
