@@ -5,9 +5,11 @@ stages:
 
 test:
   stage: test
-  image: python:3.10.10
+  image: python:3.10.10-slim-buster
   script:
     - pip install -r requirements.txt
+    - apt-get update && apt-get install -y python3-opencv
+    - apt-get install libpq-dev
     - python manage.py test
 
 build:
