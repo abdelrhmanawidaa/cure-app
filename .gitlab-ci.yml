@@ -1,6 +1,6 @@
 stages:
   - test
-  - push
+  - build-push
 
 test:
   stage: test
@@ -11,15 +11,15 @@ test:
     - apt-get install libpq-dev
     - python manage.py test
 
+
 push:
-  stage: push
+  stage: build-push
   image: docker:latest
   services:
     - docker:dind
   script:
+    - echo $CI_REGISTRY_token | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
     - docker build -t abdelrhmanawidaa/graduation-app:latest .
-    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker tag abdelrhmanawidaa/graduation-app:latest registry.hub.docker.com/abdelrhmanawidaa/graduation-app:latest
-    - docker push registry.hub.docker.com/abdelrhmanawidaa/graduation-app:latest
+    - docker push abdelrhmanawidaa/graduation-app:latest
   only:
     - main
