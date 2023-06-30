@@ -7,5 +7,5 @@ Jenkinsfile
 .gitlab-ci.yml
 .gitignore
 .gitattributes
-terraform/secret.tfvars
+secret.tfvars
 ```
