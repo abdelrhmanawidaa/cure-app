@@ -4,4 +4,7 @@ README.md
 models-code/
 docker-compose.yml
 Jenkinsfile
+.gitlab-ci.yml
+.gitignore
+.gitattributes
 ```

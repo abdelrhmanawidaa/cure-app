@@ -1,6 +1,9 @@
 
 resource "aws_ecs_cluster" "my_cluster" {
   name = "app-cluster" 
+  integration {
+    id = datadog_integration_aws_ecs.monitoring.id
+  }
 }
 
 resource "aws_ecs_task_definition" "app_task" {
@@ -50,3 +53,12 @@ resource "aws_iam_role_policy_attachment" "ecsTaskExecutionRole_policy" {
   role       = "${aws_iam_role.ecsTaskExecutionRole.name}"
   policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
 }
+
+
+resource "datadog_integration_aws_ecs" "monitoring" {
+  name      = "monitoring-ecs-integration"
+  api_key   = "bdd245b854c3cb7aab40d8b440f41af1"
+  ecs_cluster_name = "app-cluster"
+  # Additional configuration options
+}
+
