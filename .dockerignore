@@ -7,5 +7,4 @@ Jenkinsfile
 .gitlab-ci.yml
 .gitignore
 .gitattributes
-secrets.tfvars
 ```

@@ -4,5 +4,4 @@
 .git
 .terraform.lock.hcl
 terraform.tfstate.backup
-terraform/secrets.tfvars
 ```
