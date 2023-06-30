@@ -57,7 +57,7 @@ resource "aws_iam_role_policy_attachment" "ecsTaskExecutionRole_policy" {
 
 resource "datadog_integration_aws_ecs" "monitoring" {
   name      = "monitoring-ecs-integration"
-  api_key   = "bdd245b854c3cb7aab40d8b440f41af1"
+  api_key   = var.datadog_api_key
   ecs_cluster_name = "app-cluster"
   # Additional configuration options
 }

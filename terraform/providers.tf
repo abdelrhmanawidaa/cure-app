@@ -12,3 +12,15 @@ provider "aws" {
   profile = "vscode"
 
 }
+
+terraform {
+  required_providers {
+    datadog = {
+      source = "datadog/datadog"
+    }
+  }
+}
+
+provider "datadog" {
+  api_key = var.datadog_api_key
+}
