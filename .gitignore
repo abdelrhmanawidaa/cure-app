@@ -1,8 +1,7 @@
 *.tfstate
 .terraform/
 .terraform/*
-media
 .git
-.media/
 .terraform.lock.hcl
 terraform.tfstate.backup
+```

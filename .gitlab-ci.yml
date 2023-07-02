@@ -1,0 +1,25 @@
+stages:
+  - test
+  - build-push
+
+test:
+  stage: test
+  image: python:3.10.10-slim-buster
+  script:
+    - pip install -r requirements.txt
+    - apt-get update && apt-get install -y python3-opencv
+    - apt-get install libpq-dev
+    - python manage.py test
+
+
+push:
+  stage: build-push
+  image: docker:latest
+  services:
+    - docker:dind
+  script:
+    - echo $CI_REGISTRY_token | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
+    - docker build -t abdelrhmanawidaa/graduation-app:latest .
+    - docker push abdelrhmanawidaa/graduation-app:latest
+  only:
+    - main

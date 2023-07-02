@@ -2,16 +2,24 @@ pipeline {
     agent any
 
     stages {
-        
-        
         stage('Build') {
             steps {
                 script {
-                    docker.build("abdelrhmanawidaa/graduation-app:latest")
+                    def testImage1 = docker.build("abdelrhmanawidaa/graduation-app:latest")
                 }
             }
         }
-        
+
+        stage('Unit Test') {
+            steps {
+                script {
+                    testImage1.inside {
+                        sh 'python manage.py test'
+                    }
+                }
+            }
+        }
+
         stage('Push') {
             steps {
                 script {

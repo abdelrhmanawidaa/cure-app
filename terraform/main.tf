@@ -50,3 +50,33 @@ resource "aws_iam_role_policy_attachment" "ecsTaskExecutionRole_policy" {
   role       = "${aws_iam_role.ecsTaskExecutionRole.name}"
   policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
 }
+
+
+#monitoring
+
+resource "aws_cloudwatch_log_group" "ecs_task_logs" {
+  name = "/ecs/${aws_ecs_cluster.my_cluster.name}/${aws_ecs_task_definition.app_task.family}"
+}
+
+resource "aws_cloudwatch_log_stream" "ecs_task_logs" {
+  name           = "ecs_task_logs"
+  log_group_name = "${aws_cloudwatch_log_group.ecs_task_logs.name}"
+}
+
+
+resource "aws_cloudwatch_metric_alarm" "ecs_task_cpu_alarm" {
+  alarm_name          = "ecs-task-cpu-alarm"
+  comparison_operator = "GreaterThanOrEqualToThreshold"
+  evaluation_periods  = "1"
+  metric_name         = "CPUUtilization"
+  namespace           = "AWS/ECS"
+  period              = "60"
+  statistic           = "Average"
+  threshold           = "80"
+  alarm_description   = "This metric checks the CPU utilization of the ECS task"
+  alarm_actions       = []  # Add the appropriate actions (e.g., SNS notification, Lambda function) here
+  dimensions = {
+    ClusterName = "${aws_ecs_cluster.my_cluster.name}"
+    TaskFamily = "${aws_ecs_task_definition.app_task.family}"
+  }
+}
