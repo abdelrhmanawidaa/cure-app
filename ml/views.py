@@ -258,19 +258,19 @@ def scanar(request):
         print("improtant::  "+str(label_predict))
         if (prediction == 0):
             prediction = "ليس لديك اعتلال الشبكية السكري"
-            message = "نحن سعداء جدا من أجلك"
+            message = "نعلمك أن "
         elif (prediction == 1):
             prediction = "اعتلال الشبكية السكري خفيف"
-            message = "نحن آسفون من أجلك"
+            message = "نعلمك أن لديك "
         elif (prediction == 2):
              prediction = "اعتلال الشبكية السكري لديك متوسط"
-             message = "نحن آسفون من أجلك"
+             message = "نعلمك أن لديك "
         elif (prediction == 3):
              prediction = "اعتلال الشبكية السكري لديك شديد"
-             message = "نحن آسفون من أجلك"
+             message = "نعلمك أن لديك "
         elif (prediction == 4):
              prediction = "اعتلال الشبكية السكري الخاص بك منتشر بكثرة"
-             message = "نحن آسفون من أجلك"
+             message = "نعلمك أن لديك "
         else:
              prediction = "حدث خطأ ما"
         
@@ -331,9 +331,9 @@ def resultar(request):
         #result = predictions.getPredictions(int(request.GET['quantity']),int(request.GET['cho0']),int(request.GET['cho']),int(request.GET['cho1']),int(request.GET['cho2']),int(request.GET['cho3']),int(request.GET['cho4']),int(request.GET['cho5']),int(request.GET['cho6']),int(request.GET['cho7']),int(request.GET['cho8']),int(request.GET['cho9']),int(request.GET['cho11']),int(request.GET['cho12']),int(request.GET['cho13']),int(request.GET['cho14']))
         result = predictions.getPredictions(quantity,cho,cho0,cho1,cho2,cho3,cho4,cho5,cho6,cho7,cho8,cho9,cho11,cho12,cho13,cho14)
         if (result == "You don't have diabetes"):
-            message = "يسعدنا إبلاغك بأن ليس لديك مرض السكري "
+            message = "نعلمك أنه ليس لديك مرض السكري"
         else:
-            message = "يحزننا إخبارك بأن لديك مرض السكري"
+            message = "نعلمك أن لديك مرض السكري"
         
         #print(quantity,cho,cho0,cho1,cho2,cho3,cho4,cho5,cho6,cho7,cho8,cho9,cho11,cho12,cho13,cho14)
         #print("result:::::",result)
