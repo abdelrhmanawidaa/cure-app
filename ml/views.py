@@ -69,19 +69,19 @@ def scan(request):
         print("improtant::  "+str(label_predict))
         if (prediction == 0):
             prediction = "You don't have diabetic retinopathy"
-            message = "We’re very happy for you"
+            message = "We inform you that"
         elif (prediction == 1):
-            prediction = "Your diabetic retinopathy is Mild"
-            message = "We're sorry for you"
+            prediction = "Your stage of diabetic retinopathy is Mild"
+            message = "We inform you that"
         elif (prediction == 2):
-             prediction = "Your diabetic retinopathy is Moderate"
-             message = "We're sorry for you"
+             prediction = "Your stage of diabetic retinopathy is Moderate"
+             message = "We inform you that"
         elif (prediction == 3):
-             prediction = "Your diabetic retinopathy is Severe"
-             message = "We're sorry for you"
+             prediction = "Your stage of diabetic retinopathy is Severe"
+             message = "We inform you that"
         elif (prediction == 4):
-             prediction = "Your diabetic retinopathy is Proliferative"
-             message = "We're sorry for you"
+             prediction = "Your stage of diabetic retinopathy is Proliferative"
+             message = "We inform you that"
         else:
              prediction = "Unknown"
         
@@ -142,9 +142,9 @@ def result(request):
         #result = predictions.getPredictions(int(request.GET['quantity']),int(request.GET['cho0']),int(request.GET['cho']),int(request.GET['cho1']),int(request.GET['cho2']),int(request.GET['cho3']),int(request.GET['cho4']),int(request.GET['cho5']),int(request.GET['cho6']),int(request.GET['cho7']),int(request.GET['cho8']),int(request.GET['cho9']),int(request.GET['cho11']),int(request.GET['cho12']),int(request.GET['cho13']),int(request.GET['cho14']))
         result = predictions.getPredictions(quantity,cho,cho0,cho1,cho2,cho3,cho4,cho5,cho6,cho7,cho8,cho9,cho11,cho12,cho13,cho14)
         if (result == "You don't have diabetes"):
-            message = "We're happy to inform you that "
+            message = "We inform you that"
         else:
-            message = "We're sad to inform you that"
+            message = "We inform you that"
         
         #print(quantity,cho,cho0,cho1,cho2,cho3,cho4,cho5,cho6,cho7,cho8,cho9,cho11,cho12,cho13,cho14)
         #print("result:::::",result)

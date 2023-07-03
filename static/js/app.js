@@ -87,7 +87,7 @@ var total = (chickenBreast * 2) + (quarterChicken * 5) + (friedChicken * 8) +
 
 
 if(total > points){
-    document.getElementById("total").value = "Please don't Do That !";
+    document.getElementById("total").value = "Points exceeded !";
     color();
     }
 else{
