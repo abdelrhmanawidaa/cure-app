@@ -9,8 +9,12 @@ Cure was built using the following technologies:
 - JavaScript
 - Django
 - Docker
+<<<<<<< HEAD
+- Terraform2
+=======
 - Terraform
 - GitLab-CI
+>>>>>>> 34579c3e0202265fee316ce9d293fd95ba1b46a6
 - Kubernetes
 - AWS
 - Python
