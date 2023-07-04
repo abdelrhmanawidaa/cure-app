@@ -308,18 +308,95 @@ a{
 
 /* for fe YOUR STEPS */
 
+
+.about {
+    background: #fff;
+    padding: 0px 50px;
+    position: relative;
+    margin: 0 70px;
+    box-shadow: 3px 0 62px rgba(13, 3, 3, 0.18);
+    border-radius: 60px;
+    margin-top: -130px;
+}
+
+    .container_width {max-width: 1380px;
+    padding: 0 15px;
+    display: block;
+    margin: 0 auto;
+    clear: both;
+
+
+    }
+
+    .about .titlepage {
+        padding-bottom: 0;
+}
+.about .titlepage h2 {
+    position: relative;
+    padding-bottom: 18px;
+}
+
+.about .titlepage h2::before {
+    position: absolute;
+    content: "";
+    bottom: 0px;
+    background: #ed1c24;
+    width: 93px;
+    height: 11px;
+    left: 0;
+    border-radius: 20px;
+}
+.about .titlepage p {
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 30px;
+    color: #111111;
+    padding: 35px 0px 0px 0px;
+}
+
+
+.about_img figure {
+     margin: 0;
+     padding-top: 100px;
+}
+
+
+
+
 .steps-words .title-1{
     padding-top: 40px;
 }
 .step-line{
     font-size:17 ;
-    font-weight:500 ;
+    font-weight:500px ;
     padding: 4px;
 }
-/* .sec-steps{
-    background-image: url(../img/mint-blue-watercolor-texture-background-wallpaper.jpg);
-} */
 
 .sec-steps{
     font-family: 'Nunito', sans-serif ;
+}
+
+.about {
+
+}
+.banner-steps{
+    background-image: url(../img/bbanner-bg.jpg);
+    background-position: center center;
+
+    background-size: cover;
+    background-blend-mode: overlay;
+    padding: 150px;
+    padding-top: 50px;
+
+}
+.text-steps1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 45px;
+}
+.icon-1 {
+    color: #62d2a2;
+}
+.img-support{
+    height: 300px;
 }
