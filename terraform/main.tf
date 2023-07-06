@@ -17,15 +17,15 @@ resource "aws_ecs_task_definition" "app_task" {
           "hostPort": 8000
         }
       ],
-      "memory": 4096,
-      "cpu": 2048
+      "memory": 8192,
+      "cpu": 4096
     }
   ]
   DEFINITION
   requires_compatibilities = ["FARGATE"] # use Fargate as the launch type
   network_mode             = "awsvpc"    # add the AWS VPN network mode as this is required for Fargate
-  memory                   = 4096         # Specify the memory the container requires
-  cpu                      = 2048         # Specify the CPU the container requires
+  memory                   = 8192         # Specify the memory the container requires
+  cpu                      = 4096         # Specify the CPU the container requires
   execution_role_arn       = "${aws_iam_role.ecsTaskExecutionRole.arn}"
 }
 

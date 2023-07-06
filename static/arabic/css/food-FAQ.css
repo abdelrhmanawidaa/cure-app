@@ -142,6 +142,7 @@ li{
   }
   .nav-item a{
     background: none !important;
+    color: white !important;
   }
   /*.nav-link{
       color: white !important;
